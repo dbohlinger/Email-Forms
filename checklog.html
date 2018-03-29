@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Audit.css">
+    <title>CheckLog</title>
+  </head>
+  <body>
+    <h1>Checklog </h1>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+    <form>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Station</label>
+  </div>
+
+  <select class="custom-select" id="inputGroupSelect01">
+    <option value="value1">ANC</option>
+    <option value="value2">ATL</option>
+    <option value="value3">HNL</option>
+    <option value="value4">JFK</option>
+    <option value="value5">LAX</option>
+    <option value="value6">MIA</option>
+    <option value="value7">ORD</option>
+    <option value="value8">SEA</option>
+    <option value="value9">SFO</option>
+    <option value="value10">SJU</option>
+    <option value="value11">WCC</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="todaysDate">Today's Date</label>
+  <input id="todaysDate" name="contactCompany" class="form-control span3" required="required" type="date" value=""/>
+</div>
+<div class="form-group">
+  <label for="comatSent">Date Check Log Sent in COMAT</label>
+  <input id="comatSent" name="contactCompany" class="form-control span3" required="required" type="date" value=""/>
+</div>
+<TABLE bgColor=cornsilk border=1>
+  <TBODY>
+    <TR>
+      <TD>
+        <FONT face="Courier New">LAF Bill #</FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">Check Date</FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">Check #</FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">Rec'd From </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">Amount </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">Type of Funds</FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_1_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_1_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_1_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_1_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_1_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_1_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_2_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_2_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_2_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_2_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_2_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_2_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_3_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_3_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_3_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_3_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_3_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_3_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_4_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_4_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_4_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_4_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_4_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_4_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_5_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_5_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_5_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_5_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_5_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_5_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_6_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_6_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_6_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_6_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_6_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_6_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_7_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_7_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_7_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_7_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_7_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_7_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_8_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_8_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_8_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_8_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_8_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_8_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_9_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_9_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_9_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_9_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_9_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_9_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_10_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_10_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_10_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_10_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_10_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_10_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_11_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_11_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_11_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_11_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_11_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_11_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_12_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_12_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_12_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_12_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_12_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_12_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_13_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_13_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_13_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_13_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_13_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_13_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_14_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_14_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_14_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_14_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_14_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_14_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_15_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_15_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_15_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_15_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_15_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_15_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_16_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_16_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_16_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_16_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_16_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_16_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_17_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_17_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_17_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_17_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_17_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_17_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_18_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_18_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_18_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_18_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_18_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_18_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_19_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_19_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_19_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_19_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_19_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_19_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_20_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_20_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_20_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_20_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_20_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_20_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_21_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_21_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_21_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_21_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_21_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_21_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_22_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_22_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_22_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_22_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_22_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_22_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_23_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_23_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_23_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_23_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_23_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_23_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_24_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_24_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_24_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_24_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_24_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_24_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_25_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_25_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_25_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_25_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_25_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_25_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_26_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_26_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_26_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_26_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_26_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_26_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_27_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_27_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_27_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_27_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_27_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_27_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_28_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_28_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_28_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_28_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_28_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_28_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_29_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_29_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_29_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_29_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_29_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_29_6>
+        </FONT>
+      </TD>
+    </TR>
+    <TR>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_30_1>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=13 value=__________________ name=tbl1_30_2>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=10 value=_______________ name=tbl1_30_3>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=19 value=________________________ name=tbl1_30_4>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=15 value=____________________ name=tbl1_30_5>
+        </FONT>
+      </TD>
+      <TD>
+        <FONT face="Courier New">
+          <INPUT size=16 value=_____________________ name=tbl1_30_6>
+        </FONT>
+      </TD>
+    </TR>
+    <INPUT type=hidden value=6 name=Cols>
+    <INPUT type=hidden value=30 name=Rows>
+  </TBODY>
+</TABLE>
+
+      <div class="form-group"> <!-- This will need a Python or another backend language for Outlook due to security --->
+        <label for="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile">
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+
+<script src="CheckLog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">'
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="WireACHRequest.css">
+    <title>Wire/ACH Request for Payment</title>
+  </head>
+  <body>
+    <h1>Wire ACH Request Form</h1>
+    <div class="jumbotron">
+    <div class="container" id=content>
+      <form>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="payableTo">Payable to: </label>
+      <input type="text" class="form-control" id="payableTo" placeholder="Payable to:">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="amount">Amount:</label>
+      <input type="text" class="form-control" id="amount" placeholder="Amount">
+    </div>
+
+  <div class="form-group col-md-4">
+    <label for="fileNumber">File Number:</label>
+    <input type="text" class="form-control" id="fileNumber" placeholder="File Number">
+  </div>
+</div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="ourCustomer">Our Customer:</label>
+      <input type="text" class="form-control" id="ourCustomer" placeholder="Our Customer">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="invoice">Invoice or BOL#:</label>
+      <input type="text" class="form-control" id="invoice" placeholder="Invoice or BOL#">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Wire
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        ACH
+      </label>
+  </div>
+</div>
+</form>
+</div>
+      <div class=" container instructions">
+        <p>Make sure the following are done BEFORE you submit this form:</p>
+        <ul>
+          <li>Cost Entry</li>
+          <li>Correct vendor code used (listed on wire list)DO NOT USE MISC</li>
+          <li>If cost entered in Carrier Bill, you must COB shipment</li>
+          <li>Each invoice or BOL must have a separate wire form submitted</li>
+          <li>Wire must be over $100 - ACH can be any amount</li>
+          <li>Email backup to the person above on the To field or Fax to 206-835-4967</li>
+        </ul>
+        <p>Note: For wires to go out the same day, they must be submitted prior to 10:00 am Seattle Time. If not, they will go out the next business day.
+</p>
+      </div>
+      <div class=" container instructions">
+        <p>For supplier NOT listed on the WIRE/ACH LIST on Q drive we need the following before you submit A WIRE/ACH REQUEST (email the below info to the person on the to field above and ask for a new supplier set up:</p>
+         <ul>
+           <li>SCAC code if they have one (most do)</li>
+           <li>W9 - if operating in the United States</li>
+           <li>Ask if their bank charges Lynden a wire fee and if so, how much</li>
+           <li>Banking Information for both wire and ACH payments</li>
+           <li>The email address and name of person they want the remit notices sent to</li>
+           <li>Please DO NOT send a wire request until you have all of the above
+  or it will be rejected.</li>
+         </ul>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="sendMail();return false" id="submit" type="submit" value="Send">Submit</button>
+    </div>
+    <script src="WireACHRequest.js" charset="utf-8"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11.0000">
+	<meta charset="utf-8">
+	<title>Form that sends info to email client</title>
+	<meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+</head>
+<body>
+<fieldset>
+	<legend>Thank You Form</legend>
+<form>
+	Instructions: Please be advised that all Thank You's must be
+ submitted no late than 8:00am Pacific time on each Friday to make it
+ into the Weekly recognition message. Anything after that will be
+ submitted the following Friday.
+ Thank You!!<br><br>
+Include this recognition in the weekly recognition message sent out each
+ Friday?<br>
+
+<!--Yes/ No Boolean-->
+Yes:<input name="iReponse" id="txt_include" type="radio" value="Y">
+NO:<input name="iReponse" id="txt_include" type="radio" value="N"><br>
+<!--Responders Email form-->
+           To: <input name="txt_to" id="txt_to" type="email" placeholder="example@lyden.com"><br>
+<!--Station Dropdown-->
+
+Station: <select name="station">
+		<option value="value1">ANC</option>
+		<option value="value2">ATL</option>
+		<option value="value3">HNL</option>
+		<option value="value4">JFK</option>
+		<option value="value5">LAX</option>
+		<option value="value6">MIA</option>
+		<option value="value7">ORD</option>
+		<option value="value8">SEA</option>
+		<option value="value9">SFO</option>
+		<option value="value10">SJU</option>
+		<option value="value11">WCC</option>
+	</select>
+	<br>
+<!--get Responders email form-->
+From: <input name="txt_from" id="txt_from" type="email" placeholder="example@lynden.com"><br>
+          Thank you
+ for:<br><textarea name="txt_for" id="txt_for" rows="7" cols="40"></textarea><br>
+           Additional Text:<br><textarea name="txt_additional" id="txt_additional" rows="7" cols="40"></textarea><br><input name="btn_submit" onclick="sendMail(); return false" type="submit" value="Go">
+        </form>
+			</fieldset>
+<!-- <script type="text/javascript">
+        function sendMail() {
+            var link = "mailto:jward@lynden.com"
+                + "?cc=jward@Lynden.com"
+                + "&subject=" + escape("Thank You Form")
+                + "&body=Here is the info you requested%0A"
+                + "Include Thank you? : " + escape(document.getElementById('txt_include').value) + "%0A" + "%0A"
+                + "Thank you to : " + escape(document.getElementById('txt_to').value) + "%0A" + "%0A"
+                + "Station : " + escape(document.getElementById('txt_station').value) + "%0A" + "%0A"
+                + "From : " + escape(document.getElementById('txt_from').value) + "%0A" + "%0A"
+                + "Thank you for : " + escape(document.getElementById('txt_for').value) + "%0A" + "%0A"
+                + "Additional Text : " + escape(document.getElementById('txt_additional').value) + "%0A" + "%0A"
+                ;
+            window.location.href = link
+        }
+    </script> -->
+<script src="ThankYou.js"charset="utf-8"></script>
+</body></html>

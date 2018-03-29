@@ -1,0 +1,18 @@
+h1{
+  text-align: center;
+  padding: 10px;
+}
+#content{
+  border: 2px solid black;
+  padding: 25px;
+}
+button{
+  margin:20px 40%;
+  width:20%;
+}
+.instructions{
+  padding: 20px;
+}
+p{
+  font-weight: bold;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link a href="ACNReportRequest.css"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1> ACN Report Request</h1>
+    <div class="jumbotron">
+      <div class="container">
+        <table>
+          <tr>
+            <td>
+        <label for="customerName"> Customer's Name:</label>
+          <input type="text" name="customerName" value="">
+      </td>
+      </tr>
+      <tr>
+        <td>
+        <label for="hitCode">Hit Code:</label>
+        <input type="text" name="hitCode" value="">
+      </td>
+      </tr>
+      <tr>
+        <td>
+        <label for="hitCode">Hit Code:</label>
+        <input type="text" name="hitCode" value="">
+      </td>
+      </tr>
+      <tr>
+        <td>
+        <label for="hitCode">Hit Code:</label>
+        <input type="text" name="hitCode" value="">
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div class="container">
+        <p>Please set up the ACN to track shipments on which ALL of these
+hitcodes potentially could be:</p>
+      </div>
+      <div class="container">
+      <table>
+        <tr>
+          <td>
+        <label for="shipper">Shipper:</label>
+        Yes:<input type="radio" name="shipper" value="Y">
+        No:<input type="radio" name="shipper" value="N">
+      </td>
+    </tr>
+        <tr>
+          <td>
+        <label for="consignee">Consignee:</label>
+        Yes:<input type="radio" name="consignee" value="Y">
+        No:<input type="radio" name="consignee" value="N">
+      </td>
+    </tr>
+        <tr>
+         <td>
+        <label for="billTo">Bill To:</label>
+        Yes:<input type="radio" name="billTo" value="Y">
+        No:<input type="radio" name="billTo" value="N">
+      </td>
+    </tr>
+      </table>
+      </div>
+      <div class="container">
+        <p>(The ACN requires this to be the same for each of the hitcodes on
+the report.  We cannot set it up to trace shipments
+on which only one hitcode set up on the report is the shipper and
+a different hitcode set up on the report is the consignee, etc.)</p>
+<p>Do you wish charges to be visible?</p>
+Yes:<input type="radio" name="visable" value="Y">
+No:<input type="radio" name="visable" value="N">
+</div>
+</div>
+<script src="ACNReportRequest.js"></script>
+
+  </body>
+</html>

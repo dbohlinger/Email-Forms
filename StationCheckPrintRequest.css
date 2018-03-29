@@ -1,0 +1,19 @@
+#submit{
+  margin:10px 40%;
+  text-align: center;
+  font-weight: bold;
+background-color:#2473c6;
+color: #ffff;
+font-size: 25px;
+width: 15%;
+
+}
+#vendor{
+  padding:20px;
+}
+
+#special{
+  float: left;
+  padding-top: 20px;
+  text-transform: capitalize;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="StationCheckPrintRequest.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Station Check Print Request Form</title>
+  </head>
+  <body>
+      <h1>Station Check Print Request Form</h1>
+      <div class="jumbotron">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+
+        <label for="checkPayable">Check Payable: </label>
+        <input type="text" name=checkPayable"" id="checkPayable"></input>
+        <label for="Total">Total Amount: </label>
+        <input type="text" name="Total" id="total" >
+        <label for="Kayak"> Kayak Reference Number:</label>
+        <input type="text" name="Kayak" value="" id="kayak">
+      </div>
+    </div>
+  </form>
+  <div class="container">
+  <form>
+  <div class="form-group">
+    <label for="attachment">Attachment</label>
+    <input type="file" class="form-control-file" id="attachment">
+  </div>
+</form>
+</div>
+    <div class="container" id="extra">
+      <p>
+        **NOTE, BOTH THE SHIPMENT AND THE COST MUST BE ENTERED INTO KAYAK BEFORE CHECK CAN BE PROCESSED FOR PRINTING***THE VENDOR CODE FOR ALL STATION CHECK REQUESTS IS STNC*** MAKE SURE YOUR CHECKS ARE LOADED INTO YOUR PRINTER BEFORE SENDING THIS REQUEST****************
+PLEASE EMAIL OR FAX A COPY OF THE BOL, INVOICE, OR ANY DOCUMENTATION TO WARRANT THE NEED FOR CHECK REQUEST TO 206-444-4432 ALONG WITH A W-9 FORM FOR ALL NEW VENDORS.
+</p>
+<p>
+CHECKS WILL BE PRINTED TWICE DAILY ON THIS SCHEDULE:
+Requests received prior to 7:00am PT will print at approximately 7:20am PT.
+Requests received between 7:00am PT and 11:00am PT will print at approximately 11:20am PT.
+All requests received after 11:00am PT will print the following morning at 7:20am PT.
+Please plan accordingly although special print requests may be accommodated in emergencies between the hours of 8:00AM - 2:45PM PT. If a new vendor needs to be setup, printing may be delayed.
+</p>
+  </div>
+  <div class="form-row" id="vendor">
+    <div class="form-group col-md-12">
+  <label for="vendorReference">Vendor Reference #: </label>
+  <input type="text" name="vendorReference" id="vendorReference" aria-describedby="vendorReferenceHelp">
+  <large id="vendorReferenceHelp" class="form-text text-muted">
+  what you want to print on the check stub and show in payment history to make sure the vendor is able to apply funds correctly.
+</large>
+</div>
+</div>
+<div class="form-row" id="special">
+  <div class="form-group col-md-12">
+<label for="requests">Any special instructions or requests: </label>
+<select class="requests" name="requests">
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+
+</select>
+</div>
+</div>
+
+
+  <button type="btn_submit"onclick="sendMail();return false" id="submit" type="submit" value="Send">Send</button>
+
+</div>
+    <script src="StationCheckPrintRequest.js"></script>
+  </body>
+</html>
+
+<a href="#"></a>
