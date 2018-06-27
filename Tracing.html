@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <title> Tracing/Reporting/Invoicing Setup Request</title>
+  </head>
+  <body>
+    <header>
+        <h1> Tracing/Reporting/Invoicing Setup Request</h1>
+    </header>
+    <div class="jumbotron">
+      <form>
+        <label for="email"> Does the Customer Want Emailed Invoices?</label>
+        <select>
+          <option value="YES">YES</option>
+          <option value="NO">NO</option>
+        </select>
+        <label for="invocing"><strong>For Invocing,</strong> invoices will be either Domestic, International, or both? porque no los dos?</label>
+        <select>
+          <option value="Domestic">Domestic</option>
+          <option value="International">International</option>
+          <option value="Both">Both</option>
+        </select>
+      </form>
+      <hr>
+      <form class="customer">
+        <div class="row">
+        <div class="col-md-4">
+            <label for="customerName"> Customer's Company Name:</label>
+            <input  class="form-control" type="text" name="customerName" id="customerName" value="">
+        </div>
+        <div class="col-md-4">
+            <label for="customerEmail"> Customer's Email:</label>
+            <input  class="form-control" type="email" name="customerEmail"id="customerEmail" value="">
+        </div>
+        <div class="col-md-4">
+            <label for="customerPhone"> Customer's Phone:</label>
+            <input  class="form-control" type="email" name="customerPhone"id="customerPhone" value="">
+      </div>
+    </div>
+      </form>
+      <form>
+    <div class="container">
+	<div class="row">
+		<input type="hidden" name="count" value="1" />
+        <div class="control-group" id="fields">
+            <label class="control-label" for="field1">Add Hitcodes</label>
+            <div class="controls" id="profs">
+                <form class="input-append">
+                    <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                </form>
+            <br>
+            <small>Press + to add another hitCode</small>
+            </div>
+        </div>
+	</div>
+</div>
+</form>
+<form class="Airport Codes">
+<div class="container">
+<div class="row">
+<input type="hidden" name="count" value="1" />
+  <div class="control-group" id="fields">
+      <label class="control-label" for="field1">Add Hitcodes</label>
+      <div class="controls" id="profs">
+          <form class="input-append">
+              <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+          </form>
+      <br>
+      <small>Press + to add another hitCode</small>
+      </div>
+  </div>
+</div>
+</div>
+</form>
+</div>
+  <script type="text/javascript" src="Tracing.js">
+  </script>
+  </body>
+</html>

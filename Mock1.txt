@@ -1,0 +1,32 @@
+<!---Radio Buttons---!>
+<div style="color: red;"> 
+<input name="iReponse" id="Yes" type="radio" value="Yes"><label for="Yes">Yes</label>
+<input name="iReponse" id="No" type="radio" value="No"><label for="NO">No</label>
+</div>
+
+<!--Station Drop Down!-->
+ 
+<select name="station">
+<option value="value1">WCC</option>
+<option value="value2">LAX</option>
+<option value="value3">SEA</option>
+<option value="value4">ANC</option>
+</select>
+
+
+<!--Email Script---!> 
+
+"mailto:jward@lynden.com"
+                + "?cc=jward@Lynden.com"
+                + "&subject=" + escape("Thank You Form")
+                + "&body=Here is the info you requested%0A"
+                + "Include Thank you? : " + escape(document.getElementByName('iResponse').value) + "%0A" + "%0A"+console.log(iResponse);
+                + "Thank you to : " + escape(document.getElementById('txt_to').value) + "%0A" + "%0A"
+                + "Station : " + escape(document.getElementByName('station').value) + "%0A" + "%0A"+console.log(station);
+                + "From : " + escape(document.getElementById('txt_from').value) + "%0A" + "%0A"
+                + "Thank you for : " + escape(document.getElementById('txt_for').value) + "%0A" + "%0A"
+                + "Additional Text : " + escape(document.getElementById('txt_additional').value) + "%0A" + "%0A"
+                ;
+            window.location.href = link
+        }
+    </script>

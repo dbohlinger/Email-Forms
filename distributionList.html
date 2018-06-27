@@ -4,15 +4,18 @@
     <meta charset="utf-8">
     <title> Distribution List - Add or Remove Member</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   </head>
   <body>
+    <header>
     <h1> Distribution List - Add or Remove Member</h1>
+  </header>
     <div class="jumbotron">
       <div id="intro">
         <p>Confirmation will be sent once this request has been completed.</p>
         <p>* =Mandatory</p>
       </div>
-      <div class="row col-md-4">
+      <div class="row col-md-4 col-sm-4">
       <label for="companyName"><span>*</span> Company Name:</label>
       <select id="companyName" class="form-control">
         <option selected>Choose...</option>
@@ -21,9 +24,36 @@
         <option>LILCO</option>
       </select>
     </div>
-
+    <form style="padding-top:10px;">
+        <div class="form-group col-md-4">
+          <label for="mailGroup">Mail Group Name:</label>
+          <input type="text" class="form-control" id="mailGroup">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="opt">Add or Remove:</label>
+          <input type="text" class="form-control" id="opt">
+        </div>
+    </form>
+    <form>
+  <div class="container">
+<div class="row">
+  <input type="hidden" name="count" value="1" />
+      <div class="control-group" id="fields">
+          <label class="control-label" for="field1">Members (full name only)</label>
+          <div class="controls" id="profs">
+              <form class="input-append">
+                  <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Add members" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+              </form>
+              <br>
+              <small><strong>Press + to add another member</strong></small>
+            </div>
+          </div>
+      </div>
+    </div>
+  </form>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<button type="submit" onclick="sendMail();return false" class="btn btn-primary">Submit</button>
+<script src="Tracing.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

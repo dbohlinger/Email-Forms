@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Distribution List - New Mailgroup Request</title>
+  </head>
+  <body>
+    <h1>New Mail Group Request</h1>
+    <div class="jumbotron">
+      <div class="container" id="into">
+        <p>Once the distribution list has been approved, it will be set up and you will be advised once it is ready to be used.  It takes a minimum of 24 hours to be viewable in Outlook once the request has been submitted.</p>
+        <p><strong>***EFFECTIVE April 27, 2018, the Helpdesk can no longer create mailgroups that contain non-Lynden email addresses. Please ask the Customer if they can create a mailgroup for their personnel that they can maintain within their own Company.</p>
+        </strong><p>
+*** BEFORE REQUESTING A NEW MAILGROUP, CAN THIS CUSTOMER BE SET UP IN EZ COMMERCE TO UTILIZE TOOLS FOR PICKUPS, BOOKINGS AND/OR QUOTE REQUESTS IN LIEU OF A NEW MAILGROUP?
+If YES, please proceed to LShare/Marketing to set up in EZ Commerce.
+If NO, please continue to fill out this form.
+</p>
+      </div>
+      <hr></hr>
+      <form>
+        <div class="form-group col-md-2">
+          <label>Company:</label>
+        <select class="custom-select" id="company" required>
+          <option value="LAF">LAF</option>
+          <option value="LCC">LCC</option>
+          <option value="LILCO">LILCO</option>
+        </select>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="mailGroup">Mail Group Name <strong>(Must not be generic)</strong>:</label>
+            <input type="text" class="form-control" id="mailGroup" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="manger">Manager Requesting Mail Group:</label>
+            <input type="text" class="form-control" id="manager" required>
+          </div>
+        </div>
+        <div class="form-group row">
+   <label for="textArea" class="col-md-6 col-form-label">GIVE A SHORT BUT SPECIFIC/DESCRIPTIVE REASON FOR THIS DISTRIBUTION LIST:</label>
+  <div class="form-group col-md-4">
+    <textarea class="form-control" id="textArea" rows="6" required></textarea>
+   </div>
+ </div>
+ <div class="form-group row">
+<label for="members" class="col-md-6 col-form-label">WHO SHOULD BE A MEMBER OF THIS MAILGROUP, FULL NAMES ONLY (NO EMAIL ADDRESSES UNLESS INCLUDING A MAILGROUP/BOX):</label>
+<div class="form-group col-md-4">
+<textarea class="form-control" id="members" rows="6" required></textarea>
+</div>
+</div>
+ </form>
+ <button type="submit" class="btn btn-primary" onclick="sendMail();return false" id="submit" type="submit" value="Send">Submit</button>
+</div>
+
+    <script type="text/javascript" src="newMailGroupRequest.js">
+    </script>
+  </body>
+</html>

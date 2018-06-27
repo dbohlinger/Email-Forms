@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <p>
+          Confirmation from International Agent must be attached if the request affects billing to the Agent.
+          All necessary backup must be attached with DM/Station Owner approval.
+          All international correction requests must be submitted on this form.
+          All forms must be submitted by 10:00am PST each Tuesday,for the adjustment to be made within the same accounting week.
+          Control station is to always be included in this request.
+</p>
+      </div>
+     <div>
+       <hr>
+         <form>
+             <div class="form-group" >
+               <div class="form-group row">
+                <label for="HAWB" class="col-sm-1 col-form-label">HAWB#</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="HAWB" placeholder="HAWB">
+                </div>
+            </div>
+            <div class="form-group row">
+             <label for="ShipDate" class="col-sm-1 col-form-label">ShipDate</label>
+             <div class="col-sm-4">
+               <input type="date" class="form-control" id="ShipDate" placeholder="ShipDate">
+             </div>
+         </div>
+            <div class="form-group row">
+             <label for="orig" class="col-sm-1 col-form-label">orig</label>
+             <div class="col-sm-4">
+               <input type="text" class="form-control" id="orig" placeholder="orig">
+             </div>
+         </div>
+         <div class="form-group row">
+          <label for="Dest" class="col-sm-1 col-form-label">Dest</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="Dest" placeholder="Dest">
+          </div>
+      </div>
+      <div class="form-group row">
+       <label for="mode" class="col-sm-1 col-form-label">Mode</label>
+       <div class="col-sm-4">
+         <select id="mode">
+           <option value="AE">AE</option>
+           <option value="AI">AI</option>
+           <option value="OE">OE</option>
+           <option value="OI">OI</option>
+           <option value="BI">BI</option>
+           <option value="AN">AN</option>
+           <option value="ON">ON</option>
+         </select>
+       </div>
+   </div>
+   <div class="form-group row">
+      <label for="control" class="col-sm-1 col-form-label">Control</label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" id="control" placeholder="control">
+      </div>
+    </div>
+    <div class="form-group row">
+       <label for="autho" class="col-sm-1 col-form-label">Authorized BY(enter vaild mailcode)</label>
+         <div class="col-sm-4">
+         <input type="text" class="form-control" id="autho" placeholder="autho">
+       </div>
+     </div>
+    <div class="form-group row">
+       <label for="origin" class="col-sm-1 col-form-label">Original Bill to Hitcode</label>
+         <div class="col-sm-4">
+         <input type="text" class="form-control" id="origin" placeholder="origin">
+       </div>
+     </div>
+     <div class="form-group row">
+        <label for="correct" class="col-sm-1 col-form-label">Corrected Bill to Hitcode</label>
+          <div class="col-sm-4">
+          <input type="text" class="form-control" id="correct" placeholder="correct">
+        </div>
+      </div>
+      <div class="form-group row">
+         <label for="coadd" class="col-sm-1 col-form-label">Corrected Address Hitcode</label>
+           <div class="col-sm-4">
+           <input type="text" class="form-control" id="coadd" placeholder="">
+         </div>
+       </div>
+       <div class="form-group row">
+         <label for="miss" class="col-sm-1 col-form-label">Correct Invalid or missing References Numbers</label>
+         <div class="col-sm-4">
+           <select id="miss">
+             <option value=""></option>
+             <option value="YES">YES</option>
+             <option value="NO">NO</option>
+           </select>
+       </div>
+          </div>
+          <div class="form-group row">
+             <label for="reason" class="col-sm-1 col-form-label">Detailed Reason For Correction</label>
+               <div class="col-sm-4">
+               <textarea class="form-control" id="reason" placeholder=""></textarea>
+             </div>
+           </div>
+           <div class="form-group row">
+            <label for="CorrectR" class="col-sm-1 col-form-label">Reason Code for Correction</label>
+            <div class="col-sm-4">
+              <select id="CorrectR">
+                <option value="Choose Correct Reason">Choose Correct Reason</option>
+                <option value="Balance Amount Due">Balance Due Amount</option>
+                <option value="Bill posted Before All Charges Entered">Bill posted Before All Charges Entered</option>
+                <option value="Clearence & Delivery Charges and/or VAT & TAX">Clearence & Delivery Charges and/or VAT & TAX</option>
+                <option value="Customer Quote not applied">Customer Quote not applied</option>
+                <option value="Customer service reduction">Customer service reduction</option>
+                <option value="Customer Duty and/or charges ">Customer Duty and/or Charges</option>
+                <option value="Incorrect bill to party">Incorrect bill to party</option>
+                <option value="Incorrect freight charge">Incorrect freight charge</option>
+                <option value="Incorrect freight charge applied">Incorrect freight charge applied</option>
+                <option value="Incorrect operational charge applied (FSC/CSS/WRS) ">Incorrect operational charge applied (FSC/CSS/WRS)</option>
+                <option value="Incorrect Weight Entered">Incorrect Weight Entered</option>
+                <option value="Insurance or Declared Value">Insurance or Declared Value</option>
+                <option value="Misc. charges(FOB/Accessorials)">Misc. charges(FOB/Accessorials</option>
+                <option value="Missing or Invalid reference numbers">Missing or invalid reference numbers</option>
+                <option value="Profit Split added or adjusted ">Profit split added or adjusted</option>
+                <option value="Service failure">Service failure</option>
+              </select>
+            </div>
+        </div>
+
+       </form>
+     </div>
+    </div>
+  </body>
+</html>

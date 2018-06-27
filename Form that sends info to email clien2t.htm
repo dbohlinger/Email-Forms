@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><!-- saved from url=(0062)http://lshare/lint/SitePages/SendFormResultsToEmailClient.html --><HTML><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+
+<META http-equiv="X-UA-Compatible" content="IE=11.0000">      
+<META charset="utf-8">     <TITLE>Form that sends info to email client</TITLE> 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<FIELDSET><LEGEND>Thank You Form</LEGEND>         
+<FORM>            Instructions: Please be advised that all Thank You's must be 
+ submitted no late than            8:00am Pacific time on each Friday to make it 
+ into the Weekly recognition message.            Anything after that will be 
+ submitted the following Friday. Thank You!!             <BR><BR>            
+Include this recognition in the weekly recognition message sent out each 
+ Friday?<BR>            Y/N: <INPUT name="txt_include" id="txt_include" type="text" value="Y"><BR> 
+           To: <INPUT name="txt_to" id="txt_to" type="text"><BR>            
+Station: <INPUT name="txt_station" id="txt_station" type="text"><BR>            
+From: <INPUT name="txt_from" id="txt_from" type="text"><BR>            Thank you 
+ for:<BR><TEXTAREA name="txt_for" id="txt_for" rows="7" cols="40"></TEXTAREA><BR> 
+           Additional Text:<BR><TEXTAREA name="txt_additional" id="txt_additional" rows="7" cols="40"></TEXTAREA><BR><INPUT name="btn_submit" onclick="sendMail(); return false" type="submit" value="Go"> 
+        </FORM></FIELDSET>
+<SCRIPT type="text/javascript">
+        function sendMail() {
+            var link = "mailto:jward@lynden.com"
+                + "?cc=jward@Lynden.com"
+                + "&subject=" + escape("Thank You Form")
+                + "&body=Here is the info you requested%0A"
+                + "Include Thank you? : " + escape(document.getElementById('txt_include').value) + "%0A" + "%0A"
+                + "Thank you to : " + escape(document.getElementById('txt_to').value) + "%0A" + "%0A"
+                + "Station : " + escape(document.getElementById('txt_station').value) + "%0A" + "%0A"
+                + "From : " + escape(document.getElementById('txt_from').value) + "%0A" + "%0A"
+                + "Thank you for : " + escape(document.getElementById('txt_for').value) + "%0A" + "%0A"
+                + "Additional Text : " + escape(document.getElementById('txt_additional').value) + "%0A" + "%0A"
+                ;
+            window.location.href = link
+        }
+    </SCRIPT>
+  </BODY></HTML>

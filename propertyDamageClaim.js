@@ -1,6 +1,5 @@
 
 var submitBtn= document.getElementById('submit');
-
 function sendMail() {
    var link = "mailto:dylanb@lynden.com"
                 + "?cc=jward@Lynden.com"

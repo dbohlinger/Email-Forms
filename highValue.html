@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
     <title>High Value Authorization Request Form </title>
   </head>
   <body>
@@ -21,69 +23,231 @@ PLEASE REFER THEM TO A PROFESSIONAL CRATING/PACKAGING COMPANY.
   <hr>**********HIGH VALUE AUTHORIZATION********************</hr>
 </div>
 <form>
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="control">Control</label>
-      <input type="text" class="form-control" id="control">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="origin">Origin</label>
-      <input type="text" class="form-control" id="origin">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="destination">Destination</label>
-      <input type="text" class="form-control" id="destination">
+    <div class="form-group" >
+      <div class="form-group row">
+       <label for="control" class="col-sm-1 col-form-label">Control</label>
+       <div class="col-sm-4">
+         <input type="text" class="form-control" id="control" placeholder="Control">
+       </div>
+   </div>
+   <div class="form-group row">
+    <label for="origin" class="col-sm-1 col-form-label">Origin</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="origin" placeholder="Origin">
     </div>
   </div>
   <div class="form-group row">
-   <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-   <div class="col-sm-6">
-     <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+   <label for="destination" class="col-sm-1 col-form-label">Destination</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="destination" placeholder="Destination">
    </div>
- </div>
- <div class="form-group row">
-   <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-   <div class="col-sm-10">
-     <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+  </div>
+  <div class="form-group row">
+   <label for="pcs" class="col-sm-1 col-form-label">PCS/Weight</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="pcs" placeholder="PCS/Weight">
    </div>
- </div>
+  </div>
+  <div class="form-group row">
+   <label for="dims" class="col-sm-1 col-form-label">DIMS</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="dims" placeholder="Dims">
+   </div>
+  </div>
+  <div class="form-group row">
+   <label for="value" class="col-sm-1 col-form-label">Value</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="value" placeholder="Value">
+   </div>
+  </div>
+  <div class="form-group row">
+   <label for="Description" class="col-sm-1 col-form-label">Description</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="Description" placeholder="Description">
+   </div>
+  </div>
+  <div class="form-group row">
+   <label for="packaging" class="col-sm-1 col-form-label">Packaging?</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="packaging" placeholder="Packaging">
+   </div>
+  </div>
+  <div class="form-group row">
+   <label for="request" class="col-sm-1 col-form-label">Request INS.||DV?</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="request" placeholder="Request INS.||DV?">
+   </div>
+  </div>
+  <div class="form-group row">
+   <label for="shipper" class="col-sm-1 col-form-label">Shipper</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="shipper" placeholder="Shipper">
+   </div>
+  </div>
 
+  <div class="form-group row">
+   <label for="consignee" class="col-sm-1 col-form-label">Consignee</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="consignee" placeholder="Consignee">
+   </div>
+  </div>
 
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  <div class="form-group row">
+   <label for="shipHistory" class="col-sm-1 col-form-label">Ship History, This Destination</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="shipHistory" placeholder="Ship History, This Destination">
+   </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+
+  <div class="form-group row">
+   <label for="commodity" class="col-sm-1 col-form-label">Commodity?</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="commodity" placeholder="Commodity">
+   </div>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
+
+  <div class="form-group row">
+   <label for="hawb" class="col-sm-1 col-form-label"> LAF HAWB#</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="hawb" placeholder="LAF HAWB#">
+   </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
+
+  <div class="form-group row">
+   <label for="charter" class="col-sm-1 col-form-label">Charter</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="charter" placeholder=" Charter(Space, Full, Contracted?)">
+   </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+
+  <div class="form-group row">
+   <label for="vessel" class="col-sm-1 col-form-label"> Vessel Name</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="vessel" placeholder=" Vessel Name">
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="voyage" class="col-sm-1 col-form-label"> Voyage#</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="voyage" placeholder="Voyage #">
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="bill" class="col-sm-1 col-form-label">Ocean BOL/AAWB</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="bill" placeholder="Ocean BOl/AAWB">
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="dateofp" class="col-sm-1 col-form-label">Date of Possesion</label>
+   <div class="col-sm-4">
+     <input type="date" class="form-control" id="dateofp" placeholder="Date of Possesion">
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="dateofd" class="col-sm-1 col-form-label">Date of Departure</label>
+   <div class="col-sm-4">
+     <input type="date" class="form-control" id="dateofd" placeholder="Date of Departure">
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="dateofa" class="col-sm-1 col-form-label">Date of Arrival</label>
+   <div class="col-sm-4">
+     <input type="date" class="form-control" id="dateofa" placeholder="Date of Arrival">
+   </div>
+  </div>
+
+  <div class="form-group row">
+   <label for="terms" class="col-sm-1 col-form-label">Terms</label>
+   <div class="col-sm-4">
+     <input type="text" class="form-control" id="terms">
+   </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="single" class="col-sm-1 col-form-label">Single or Multiples Booking</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="single" placeholder="Single or Multi">
+   </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="route" class="col-sm-1 col-form-label">Proposed Routing</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="route" placeholder="Route">
+   </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="comments" class="col-sm-1 col-form-label">Comments</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="comments" placeholder="Comments">
+   </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="warc" class="col-sm-1 col-form-label">War Risk Country</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="warc" placeholder="War Risk Country">
+   </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="warp" class="col-sm-1 col-form-label"> War Risk Carrier</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="warp" placeholder=" War Risk Carrier">
+   </div>
+  </div>
+
+</div>
 </form>
+<div class="container">
+  <p><strong>PER LAF OPERATION PROCEDURES MANUAL,IF IT IS AFTER OFFICE HOURS ALL
+STATIONS ARE TO CONTACT ONE OF THE FOLLOWING G.O. OFFICE STAFF AT
+HOME IN THE FOLLOWING ORDER:
+</strong></p>
+  <table>
+<p>***********************************************************************</p>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Number</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr>
+      <th>Tammy McKinnon</th>
+       <td>(206) 724-2033 </td>
+    </tr>
+    <tr>
+      <th>Brian Ruese</th>
+       <td>(206) 300-9533  </td>
+    </tr>
+    <tr>
+      <th>Howard Hales</th>
+       <td>(206) 999-0991</td>
+    </tr>
+    <tr>
+      <th>Laura Sanders</th>
+       <td>(206) 255-1894</td>
+    </tr>
+    <tr>
+      <th>John Kaloper</th>
+       <td>(206) 953-6673</td>
+    </tr>
 
+  </tbody>
+</table>
+<p>***********************************************************************</p>
+</div>
+  <button type="submit" onclick="sendMail();return false" class="btn btn-primary">Submit</button>
+</div>
+<script src="highValue.js" charset="utf-8"></script>
   </body>
 </html>

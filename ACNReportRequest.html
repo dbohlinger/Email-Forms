@@ -5,78 +5,114 @@
     <title></title>
     <link a href="ACNReportRequest.css"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    </head>
   <body>
     <h1> ACN Report Request</h1>
     <div class="jumbotron">
       <div class="container">
-        <table>
-          <tr>
-            <td>
-        <label for="customerName"> Customer's Name:</label>
-          <input type="text" name="customerName" value="">
-      </td>
-      </tr>
-      <tr>
-        <td>
-        <label for="hitCode">Hit Code:</label>
-        <input type="text" name="hitCode" value="">
-      </td>
-      </tr>
-      <tr>
-        <td>
-        <label for="hitCode">Hit Code:</label>
-        <input type="text" name="hitCode" value="">
-      </td>
-      </tr>
-      <tr>
-        <td>
-        <label for="hitCode">Hit Code:</label>
-        <input type="text" name="hitCode" value="">
-      </td>
-      </tr>
-      </table>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="customerName"> Customer's Name:</label>
+                <input  class="form-control" type="text" name="customerName" id="customerName" value="">
+            </div>
+            <div class="col-md-4">
+                <label for="customerEmail"> Customer's Email:</label>
+                <input  class="form-control" type="email" name="customerEmail"id="customerEmail" value="">
+            </div>
+          </div>
+          <form>
+        <div class="container">
+      <div class="row">
+        <input type="hidden" name="count" value="1" />
+            <div class="control-group col-md-4" id="fields">
+                <label class="control-label" for="field1">Add Hitcodes</label>
+                <div class="controls" id="profs">
+                    <form class="input-append">
+                        <div id="field">
+                          <input autocomplete="off" class="input fieldz" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/>
+                          <button id="b1" class="btn add-more btn-info" type="button">
+                            <span class="glyphicon glyphicon-plus"></span>
+                          </button>
+                        </div>
+                    </form>
+                <br>
+                <p><strong>Press <span class="glyphicon glyphicon-plus"></span> to add another hit code</strong></p>
+                </div>
+            </div>
+      </div>
+    </div>
+    </form>
+    <div class="container">
+      <p>Please set up the ACN to track shipments on which ALL of these
+         hitcodes potentially could be:
+       </p>
       </div>
       <div class="container">
-        <p>Please set up the ACN to track shipments on which ALL of these
-hitcodes potentially could be:</p>
-      </div>
-      <div class="container">
-      <table>
-        <tr>
-          <td>
+      <form>
+        <div class="row">
+          <div class="form-group">
         <label for="shipper">Shipper:</label>
-        Yes:<input type="radio" name="shipper" value="Y">
-        No:<input type="radio" name="shipper" value="N">
-      </td>
-    </tr>
-        <tr>
-          <td>
+        <select name="shipper" id="shipper">
+          <option value="yes">Yes</option>
+          <option value="no">NO</option>
+        </select>
         <label for="consignee">Consignee:</label>
-        Yes:<input type="radio" name="consignee" value="Y">
-        No:<input type="radio" name="consignee" value="N">
-      </td>
-    </tr>
-        <tr>
-         <td>
+        <select class="" name="consignee" id="consignee">
+          <option value="yes">Yes</option>
+          <option value="no">NO</option>
+        </select>
         <label for="billTo">Bill To:</label>
-        Yes:<input type="radio" name="billTo" value="Y">
-        No:<input type="radio" name="billTo" value="N">
-      </td>
-    </tr>
-      </table>
+  <select class="" name="billTo" id="billTo">
+    <option value="yes">Yes</option>
+    <option value="no">NO</option>
+  </select>
+</div>
+</div>
+  </form>
       </div>
       <div class="container">
         <p>(The ACN requires this to be the same for each of the hitcodes on
-the report.  We cannot set it up to trace shipments
-on which only one hitcode set up on the report is the shipper and
-a different hitcode set up on the report is the consignee, etc.)</p>
-<p>Do you wish charges to be visible?</p>
-Yes:<input type="radio" name="visable" value="Y">
-No:<input type="radio" name="visable" value="N">
+            the report.  We cannot set it up to trace shipments
+            on which only one hitcode set up on the report is the shipper and
+            a different hitcode set up on the report is the consignee, etc.)
+       </p>
+<label for="neh">Do you wish charges to be visible?</label>
+ <select class="neh" name="" id="neh">
+   <option>Yes</option>
+   <option>No</option>
+ </select>
+</div>
+<div class="container">
+  <div class="form-group">
+    <label for="mailCodes">LAF mailcodes</label>
+    <textarea class="form-control" id="mailCodes" rows="2" style="width:365px; height: 128px;"></textarea>
+  </div>
+</div>
+<div class="">
+  <p><span>*****</span>ACN will run only Monday through Friday when customer has current
+shipment/s in our system, unless otherwise specifically reqeusted below.  *****</p>
 </div>
 </div>
-<script src="ACNReportRequest.js"></script>
-
+<div class="container">
+<label for="ACN">Customer must receive ACN even when they have no shipments:</label>
+<select class="" name="ACN" id="ACN">
+<option value="yes">Yes</option>
+<option value="no">NO</option>
+</select>
+<div class="container">
+      <div class="col-md-2">
+          <label for="alt">Alternate days to run ACN:</label>
+          <input  class="form-control" type="text" name="alt" value="" id="alt">
+      </div>
+      </div>
+    </div>
+    <button type="submit" onclick="sendMail();return false" class="btn btn-primary">Submit</button>
+  </div>
+  <script src="ACNReportRequest.js"></script>
+<script src="Tracing.js"></script>
   </body>
 </html>

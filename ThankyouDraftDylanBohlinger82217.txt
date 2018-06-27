@@ -1,0 +1,83 @@
+
+
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=11.<html>
+
+<head>
+  <meta http-equiv=" X-UA-Compatible " content="IE=11.0000 ">
+
+  <meta charset="utf-8 ">
+  <title>Form that sends info to email client</title>
+  <meta name="GENERATOR " content="MSHTML 11.00.10570.1001 ">
+</head>
+
+<body>
+  <fieldset>
+    <form> Instructions: Please be advised that all Thank You's must be submitted no late than 8:00am Pacific time on each Friday to make it into the Weekly recognition message. Anything after that will be submitted the following Friday. Thank You!!
+      <legend>Thank You Form</legend><br><br> Include this recognition in the weekly recognition message sent out each Friday?
+      <br> Y/N:
+<!---Radio Buttons---!>
+    <div style="color: red;"> 
+<input name="iReponse" id="Yes" type="radio" value="Yes"><label for="Yes">Yes</label>
+<input name="iReponse" id="No" type="radio" value="No"><label for="NO">No</label>
+</div>
+
+
+Station:
+      <div class="station ">
+<!---Select Element--!>
+ 
+<select name="station">
+<option value="value1">WCC</option>
+<option value="value2">LAX</option>
+<option value="value3">SEA</option>
+<option value="value4">ANC</option>
+</select>
+
+      </div><br> From: <input name="txt_from " id="txt_from " type="text "><br> Thank you for:
+      <br><textarea name="txt_for " id="txt_for " rows="7 " cols="40 "></textarea><br> Additional Text:<br><textarea name="txt_additional " id="txt_additional " rows="7 " cols="40 "></textarea><br><input name="btn_submit " onclick="sendMail(); return
+    false " type="submit "
+        value="Go ">
+    </form>
+  </fieldset>
+  <script type="text/javascript ">
+    function sendMail() {
+      var link =
+        "mailto:jward@lynden.com " +
+        "?cc=jward@Lynden.com " +
+        "&subject=" +
+        escape(" Thank You Form ") +
+        "&body=Here is the info you requested%0A " +
+        "Include Thank you? : " +
+        escape(document.getElementById("txt_include ").value) +
+        "%0A " +
+        "%0A " +
+        "Thank you to : " +
+        escape(document.getElementById("txt_to ").value) +
+        "%0A " +
+        "%0A " +
+        "Station : " +
+        escape(document.getElementById("txt_station ").value) +
+        "%0A " +
+        "%0A " +
+        "From : " +
+        escape(document.getElementById("txt_from ").value) +
+        "%0A " +
+        "%0A " +
+        "Thank you for : " +
+        escape(document.getElementById("txt_for ").value) +
+        "%0A " +
+        "%0A " +
+        "Additional Text : " +
+        escape(document.getElementById("txt_additional ").value) +
+        "%0A " +
+        "%0A ";
+      window.location.href = link;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-var radio= document.getElementsByClassName(",")
+var radio= document.getElementById('submit');
 
 function sendMail() {
    var link = "mailto:jward@lynden.com"

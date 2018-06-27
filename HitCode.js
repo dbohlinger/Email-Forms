@@ -15,7 +15,7 @@ function sendMail() {
 + "Telephone : " + escape(document.getElementById('phone').value) + "%0A" + "%0A"
 + "Sales Rep : " + escape(document.getElementById('sales').value) + "%0A" + "%0A"
     + "Additional Text : " + escape(document.getElementById('comment').value) + "%0A" + "%0A"
-    + "a : " + escape(document.getElementById('sales').value) + "%0A" + "%0A"
+    + "a : " + escape(document.getElementById('fileUpload').value) + "%0A" + "%0A"
 
                 ;
             window.location.href = link
