@@ -12,11 +12,10 @@
   </header>
     <div class="jumbotron">
       <div id="intro">
-        <p>Confirmation will be sent once this request has been completed.</p>
-        <p>* =Mandatory</p>
       </div>
-      <div class="row col-md-4 col-sm-4">
-      <label for="companyName"><span>*</span> Company Name:</label>
+      <form style="padding-top:10px;">
+      <div class="row col-md-4 col-md-4">
+      <label for="companyName">Company Name:</label>
       <select id="companyName" class="form-control">
         <option selected>Choose...</option>
         <option>LAF</option>
@@ -24,14 +23,16 @@
         <option>LILCO</option>
       </select>
     </div>
-    <form style="padding-top:10px;">
-        <div class="form-group col-md-4">
+    <div class="form-group col-md-4">
           <label for="mailGroup">Mail Group Name:</label>
           <input type="text" class="form-control" id="mailGroup">
         </div>
         <div class="form-group col-md-2">
           <label for="opt">Add or Remove:</label>
-          <input type="text" class="form-control" id="opt">
+          <select id="choice">
+            <option>Add</option>
+            <option>Remove</option>
+          </select>
         </div>
     </form>
     <form>
@@ -42,7 +43,7 @@
           <label class="control-label" for="field1">Members (full name only)</label>
           <div class="controls" id="profs">
               <form class="input-append">
-                  <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Add members" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                  <div id="field"><input autocomplete="off" class="input fieldz" id="field1" name="prof1" type="text" placeholder="Add members" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
               </form>
               <br>
               <small><strong>Press + to add another member</strong></small>
@@ -51,9 +52,10 @@
       </div>
     </div>
   </form>
+  <button type="submit" onclick="sendMail();return false" class="btn btn-primary">Submit</button>
+
 </div>
-<button type="submit" onclick="sendMail();return false" class="btn btn-primary">Submit</button>
-<script src="Tracing.js"></script>
+<script src="distributionList.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

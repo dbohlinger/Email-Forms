@@ -1,13 +1,13 @@
+h1{
+   padding-left: 30px;
+}
 label{
 font-weight: bold
 }
 
 #submit{
-  margin:10px 40%;
-  text-align: center;
-  font-weight: bold;
-background-color:#2473c6;
-color: #ffff;
-font-size: 25px;
-
+  margin:50px 40%;
+  text-align:center;
+  font-weight:bold;
+  width: 20%
 }

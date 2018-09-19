@@ -15,47 +15,70 @@
     <div class="jumbotron">
       <div class="container">
       <form>
-        <div class="row">
-          <div class="col-md-3">
+        <div class=" form-group row col-md-3">
               <label for="AAWB">Origin of AAWB:</label>
               <input  class="form-control" type="text" name="AAWB" id="AAWB">
           </div>
-          <div class="col-md-3">
-              <label for="customerEmail"> Customer's Email:</label>
-              <input  class="form-control" type="email" name="customerEmail"id="customerEmail">
+        <div class="form-group row col-md-3">
+              <label for="Bill">Airline Bill</label>
+              <input  class="form-control" type="text" name="bill"id="Bill">
           </div>
-          <div class="col-md-3">
+        <div class="form-group row col-md-3">
               <label for="shipdate">Ship Date:</label>
               <input  class="form-control" type="date" name="shipdate"id="shipdate">
         </div>
-        <div class="col-md-3">
+      <div class="form-group row col-md-3">
             <label for="CNRED">Date CNRE'D:</label>
             <input  class="form-control" type="date" name="CNRED"id="CNRED">
         </div>
-      </form>
-    </div>
+    </form>
       </div>
-      <form>
-    <div class="container">
-  <div class="row">
-    <input type="hidden" name="count" value="1" />
-        <div class="control-group" id="fields">
-            <label class="control-label" for="field1">Add Hitcodes</label>
-            <div class="controls" id="profs">
-                <form class="input-append">
-                    <div id="field">
-                      <input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/>
-                        <button id="b1" class="btn add-more" type="button">+</button>
-                      </div>
-                </form>
-            <br>
-            <small>Press + to add another hitCode</small>
+      <hr></hr>
+  <div class="container">
+      <form name="">
+        <div class="col-xs-12">
+          <div id="field">
+            <div id="field0">
+              <!-- Text input-->
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="control-label" for="action_org">ORG</label>
+                    <input id="action_org" name="action_org" type="text" class="form-control input-md">
+                </div>
+                <!-- Text input-->
+                <div class="form-group col-md-2 col-sm-3" >
+                  <label class=" control-label" for="action_dest">DEST</label>
+                  <input id="action_dest" name="action_dest" type="text" class="form-control input-md">
+                </div>
+                <div class="form-group col-md-3">
+                  <label class=" control-label" for="action_consignee">Consignee</label>
+                  <input id="action_consignee" name="action_consignee" type="text" class="form-control input-md">
+                </div>
+                <div class="form-group col-md-4">
+                  <label class=" control-label" for="action_description"> Detailed Description</label>
+                  <textarea id="action_description" name="action_description" type="text" placeholder="" class="form-control input-md"></textarea>
+                </div>
+              </div>
             </div>
+            <!-- Button -->
+            <div class="form-group">
+              <div class="col-md-6">
+                <button id="add-more" name="add-more" class="btn btn-primary" style="margin:0 90%;">Add More</button>
+              </div>
+            </div>
+          </div>
         </div>
-  </div>
-</div>
 </form>
     </div>
+    <div class="container">
+      <label class="control-label" for="name">Name
+      <input class="form-control input-md " name="name" type="text">
+      <p><small>**HAS THE SHIPPER AND/OR CONSIGNEE BEEN NOTIFIED OF THE PROBLEM**<small></p>
+    </div>
+    <div>
+      <button class="btn btn-success" onclick="sendMail();return false" id="submit" type="submit" value="Send" style="margin:2% 40%;width:15%">Submit</button>
+    </div>
+</div>
 <script src="OSD.js" charset="utf-8"></script>
   </body>
 </html>

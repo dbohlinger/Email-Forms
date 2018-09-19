@@ -9,6 +9,8 @@ function sendMail() {
                 + "Check Payable To : " + escape(document.getElementById('checkPayable').value) + "%0A" + "%0A"
                 + "Total : " + escape(document.getElementById('total').value) + "%0A" + "%0A"
                 + "Kayak Reference Number : " + escape(document.getElementById('kayak').value) + "%0A" + "%0A"
+                + "Vendor Reference Number : " + escape(document.getElementById('vendorReference').value) + "%0A" + "%0A"
+                + "Special instructions : " + escape(document.getElementById('request').value) + "%0A" + "%0A"
                 ;
             window.location.href = link
         }

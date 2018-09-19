@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <h1> Special Billing Request</h1>
+      <h1 style="padding-left:25px;"> Special Billing Request</h1>
     </header>
     <div class="jumbotron">
       <div class="container">
@@ -49,7 +49,7 @@
 <hr>
 <p>***** <strong>DO NOT SEND THIS FORM UNTIL YOU CAN ASWER 'YES' TO THE NEXT QUESTION AND COMPLETE THE SECOND.</strong> *****</p>
 <hr>
-<div class="container">
+
   <form>
   <!---<div class="form-row"> -->
     <div class="form-group col-md-4">
@@ -60,7 +60,6 @@
       <label for="hitcode">Hitcode</label>
       <input type="text" class="form-control" id="hitcode" placeholder="Hitcode">
     </div>
-  </div>
   <div class="form-row">
   <div class="form-group col-md-6">
     <label for="address1">Address</label>
@@ -125,7 +124,7 @@
     <textarea class="form-control" id="specialdir" rows="3"></textarea>
   </div>
 </form>
-<button type="submit" class="btn btn-primary" id="submit" type="submit" value="Send">Submit</button>
+<button type="submit" class="btn btn-primary" id="submit" type="submit" value="Send"onclick="sendMail(); return false" style="width:20%; margin:50px 40%">Submit</button>
 
 </div>
 <script type="text/javascript" src="special.js"></script>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script type="text/javascript" src= "Tracing.js"></script>
+    <link href="deletehitcode.css">
     <title> Delete Hitcode Request</title>
   </head>
   <body>
@@ -20,44 +20,95 @@
         </p>
     </div>
     <form>
-  <div class="container">
-<div class="row">
-  <input type="hidden" name="count" value="1" />
-      <div class="control-group" id="fields">
-          <label class="control-label" for="field1">Add Hitcodes</label>
-          <div class="controls" id="profs">
-              <form class="input-append">
-                  <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+      <div class="col-xs-12">
+        <div id="field">
+          <div id="field0">
+            <!-- Text input-->
+            <div class="form-row">
+              <div class="form-group col-sm-2">
+                <label class="control-label" for="action_hitcode">LAF Hitcode#</label>
+                  <input id="action_hitcode" name="action_hitcode" type="text" class="form-control input-md lol">
+              </div>
+              <!-- Text input-->
+              <div class="form-check form-group col-md-2"  >
+                <label class=" control-label " for="action_date">Duplicate</label>
+                <input id="action_duplicate" name="action_error" type="radio"  value="0" class="form-check-input form-control input-md lol ">
+              </div>
+              <div class="form-check form-group col-md-2">
+                <label class=" control-label" for="action_check">Kayak Error</label>
+                <input id="action_kayak" name="action_error" type="radio" value="1"class="form-check-input control form-control input-md lol ">
+              </div>
+              <div class="form-check form-group col-md-2">
+                <label class=" control-label" for="action_address">Address no longer used?</label>
+                <input id="action_address" name="action_error" type="radio" value="2"  class="form-check-input  form-control input-md lol ">
+              </div>
+              <div class="form-group col-sm-2">
+                <label class="control-label" for="action_other1">Other?</label>
+                  <input id="action_other1" name="action_error" type="radio" class="form-control input-md lol">
+              </div>
+              <div class="form-group col-sm-2">
+                <label class="control-label" for="action_other">Other Reason?</label>
+                  <input id="action_other" name="action_other" type="text" class="form-control input-md lol">
+              </div>
+            </div>
+          </div>
+          <button id="add-more" name="add-more" class="btn btn-primary" style="margin:0 90%;">Add More</button>
+        </div>
+        <!-- <button id="add-more" name="add-more" class="btn btn-primary" style="margin:0 90%;">Add More</button> -->
+      </div>
+                  <!-- </div> --> -->
               </form>
           <br>
-          <small>Press + to add another hitCode</small>
-          </div>
-        </div>
-      </div>
-    </div>
+          <small>Press + to add another HitCode</small>
   </form>
+  <hr>
       <form class="" action="index.html" method="post">
   <div class="container" id="reasons" style=padding:10px;>
       <h3> Reason for Deletion:</h3>
           <div>
           <label for="dup">Please list the hitcodes that are duplicates( if multiple, follow with comma)</label>
-           <input type="text" name="" value="" id="dup">
+           <input type="text"id="dup">
          </div>
          <div>
         <label for="address">Address no longer used:</label>
-        <select><option value="No">No</option><option value="Yes">Yes</select>
-          <p><small><strong>if customer moved, do not create a new hitcode</strong></small></p>
+        <select id="address">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+          <p>
+            <small><strong>if customer moved, do not create a new hitcode</strong></small>
+          </p>
     </div>
     <div>
       <label for="kayak">Kayak Error?</label>
-      <select><option value="No">No</option><option value="Yes">Yes</select>
+      <select id="Kayak"><option value="No">No</option><option value="Yes">Yes</select>
     </div>
       <div class="form-group">
-    <label for="exampleFormControlTextarea1">Other:</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+    <label for="other">Other:</label>
+    <textarea class="form-control" id="other" rows="2"></textarea>
   </div>
     </div>
   </form>
-  <button type="submit" class="btn btn-primary" id="submit" type="submit" value="Send">Submit</button>
+<div>
+  <button type="submit" class="btn btn-primary" id="submit" type="submit" value="Send" onclick="sendMail(); return false" style="margin:50px 40%;
+  width:20%;">Submit</button>
+</div>
+</div>
+  <script src="deletehitcode.js" charset="utf-8"></script>
 </body>
 </html>
+
+<!-- <div class="container">
+<div class="row col-md-6">
+<input type="hidden" name="count" value="1" />
+    <div class="control-group" id="fields">
+        <label class="control-label" for="field1">Add Hitcodes</label>
+        <div class="controls" id="profs">
+            <form class="input-append">
+                <div id="field">
+                  <input autocomplete="off" class="input fieldz" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/>
+                  <label for="duplicate">
+                  <input type="checkbox" id="duplicate">
+                  <!- Classifying the Reason for deletion
+                  <input type="checkbox" name="errorType" value="duplicate" class="input fieldz">
+                  !-->

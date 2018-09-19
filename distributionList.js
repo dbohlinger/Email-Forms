@@ -4,7 +4,6 @@ var inputGetter=document.getElementsByClassName("fieldz");
 var idGetter =document.querySelectorAll('id');
 var labelGetter=document.getElementsByTagName('label');
 
-
 $(document).ready(function(){
     var next = 1;
     $(".add-more").click(function(e){
@@ -31,29 +30,24 @@ $(document).ready(function(){
     });
 });
 
+
+
 function sendMail() {
    var link = "mailto:jward@lynden.com"
                 + "?cc=jward@Lynden.com"
                 + "&subject=" + escape("New Mail Group Request")
                 + "&body=Here is the info you requested%0A"
-                + "Customer's Name : " + escape(document.getElementById('customerName').value) + "%0A" + "%0A"
-                + "Customer's Email : " + escape(document.getElementById('customerEmail').value) + "%0A" + "%0A"
-                + "Hitcodes : " +setValue() + "%0A" + "%0A"
-                + "Shipper : " + escape(document.getElementById('shipper').value) + "%0A" + "%0A"
-                + "consignee : " + escape(document.getElementById('consignee').value) + "%0A" + "%0A"
-                + "billTo : " + escape(document.getElementById('billTo').value) + "%0A" + "%0A"
-                + "Charges Visable? : " + escape(document.getElementById('neh').value) + "%0A" + "%0A"
-                + "mailCodes : " + escape(document.getElementById('mailCodes').value) + "%0A" + "%0A"
-                + "ACN : " + escape(document.getElementById('ACN').value) + "%0A" + "%0A"
-                + "alt : " + escape(document.getElementById('alt').value) + "%0A" + "%0A"
+                + "Company Name : " + escape(document.getElementById('companyName').value) + "%0A" + "%0A"
+                + "Mail Group : " + escape(document.getElementById('mailGroup').value) + "%0A" + "%0A"
+                + "Add or Remove:  "+ escape(document.getElementById('choice').value)+"%0A" + "%0A"
+                + "Members : " +setValue() + "%0A" + "%0A"
                 ;
             window.location.href = link
         }
 
-// Gets Hitcodes from Dynamic Inputs
+//Gets Hitcodes from Dynamic Inputs
 var arr=[];
  function setValue(){
-   //clear array
    if(arr.length>0){
      arr.length=0;
    }
@@ -62,20 +56,3 @@ var arr=[];
      }
      return arr
  }
-//////
-
- // Refactoring sendMail function
-//
-// function sendMails(){
-//   //Setting up the mailcode
-//    // var link="mailto:dylanb@lynden.com"
-//    // +"&subject="+escape(document.querySelector("h1");
-//    // + "&body=Here is the info you requested%0A"
-//   //have the function find all of the labels on the page
-//   for(var i=0; i<labelGetter.length; i++){
-//     console.log(i);
-//     // for each id return name + value in email
-//     return
-//     //forEach???
-//   }
-// }

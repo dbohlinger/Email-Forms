@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link a href="ACNReportRequest.css"></link>
+    <link rel="stylesheet" href="ACNReportRequest.css"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
       crossorigin="anonymous"></script>
     </head>
   <body>
@@ -16,44 +16,46 @@
       <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <label for="customerName"> Customer's Name:</label>
+                <label for="customerName">Customer's Name:</label>
                 <input  class="form-control" type="text" name="customerName" id="customerName" value="">
             </div>
             <div class="col-md-4">
-                <label for="customerEmail"> Customer's Email:</label>
+                <label for="customerEmail">Customer's Email:</label>
                 <input  class="form-control" type="email" name="customerEmail"id="customerEmail" value="">
             </div>
           </div>
-          <form>
-        <div class="container">
-      <div class="row">
-        <input type="hidden" name="count" value="1" />
-            <div class="control-group col-md-4" id="fields">
-                <label class="control-label" for="field1">Add Hitcodes</label>
-                <div class="controls" id="profs">
-                    <form class="input-append">
-                        <div id="field">
-                          <input autocomplete="off" class="input fieldz" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/>
-                          <button id="b1" class="btn add-more btn-info" type="button">
-                            <span class="glyphicon glyphicon-plus"></span>
-                          </button>
-                        </div>
-                    </form>
-                <br>
-                <p><strong>Press <span class="glyphicon glyphicon-plus"></span> to add another hit code</strong></p>
-                </div>
+        </div>
+        <form>
+      <div class="container">
+    <div class="row col-md-4">
+      <input type="hidden" name="count" value="1" />
+          <div class="control-group" id="fields">
+              <label class="control-label" for="field1">Add Hitcodes</label>
+              <div class="controls" id="profs">
+                  <form class="input-append">
+                      <div id="field">
+                        <input autocomplete="off" class="input fieldz" id="field1" name="prof1" type="text" placeholder="Add Hitcode" data-items="8"/>
+                        <!-- Classifying the Reason for deletion
+                        <input type="checkbox" name="errorType" value="duplicate" class="input fieldz">
+                        !-->
+                        <button id="b1" class="btn add-more" type="button">+</button>
+                      </div>
+                  </form>
+              <br>
+              <small>Press + to add another HitCode</small>
+              </div>
             </div>
-      </div>
-    </div>
-    </form>
+          </div>
+        </div>
+      </form>
+    <hr></hr>
     <div class="container">
       <p>Please set up the ACN to track shipments on which ALL of these
          hitcodes potentially could be:
        </p>
       </div>
-      <div class="container">
+      <div class="container" id="binaries">
       <form>
-        <div class="row">
           <div class="form-group">
         <label for="shipper">Shipper:</label>
         <select name="shipper" id="shipper">
@@ -71,7 +73,6 @@
     <option value="no">NO</option>
   </select>
 </div>
-</div>
   </form>
       </div>
       <div class="container">
@@ -86,33 +87,39 @@
    <option>No</option>
  </select>
 </div>
-<div class="container">
+ <hr></hr>
+<div class="container" id="mailBox">
   <div class="form-group">
     <label for="mailCodes">LAF mailcodes</label>
     <textarea class="form-control" id="mailCodes" rows="2" style="width:365px; height: 128px;"></textarea>
   </div>
 </div>
 <div class="">
-  <p><span>*****</span>ACN will run only Monday through Friday when customer has current
-shipment/s in our system, unless otherwise specifically reqeusted below.  *****</p>
+  <p>
+    <span>*****</span>ACN will run only Monday through Friday when customer has current
+shipment/s in our system, unless otherwise specifically reqeusted below.  *****
+</p>
 </div>
-</div>
+
 <div class="container">
+  <div class='form-group'>
 <label for="ACN">Customer must receive ACN even when they have no shipments:</label>
 <select class="" name="ACN" id="ACN">
 <option value="yes">Yes</option>
 <option value="no">NO</option>
 </select>
+</div>
+</div>
 <div class="container">
-      <div class="col-md-2">
+      <div class="col-md-4 col-sm-4">
           <label for="alt">Alternate days to run ACN:</label>
           <input  class="form-control" type="text" name="alt" value="" id="alt">
       </div>
       </div>
+  <div>
+      <button class="btn btn-primary submit" onclick="sendMail();return false;" id="submit" type="submit" value="Send">Submit</button>
     </div>
-    <button type="submit" onclick="sendMail();return false" class="btn btn-primary">Submit</button>
   </div>
   <script src="ACNReportRequest.js"></script>
-<script src="Tracing.js"></script>
   </body>
 </html>

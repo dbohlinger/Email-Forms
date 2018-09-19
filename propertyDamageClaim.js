@@ -16,6 +16,7 @@ function sendMail() {
                 + "State : " + escape(document.getElementById('inputState').value) + "%0A" + "%0A"
                 + "Zip : " + escape(document.getElementById('inputZip').value) + "%0A" + "%0A"
                 + "Incident Date : " + escape(document.getElementById('incidentDate').value) + "%0A" + "%0A"
+                + "Service Provider That Caused Damage : " + escape(document.getElementById('service').value) + "%0A" + "%0A"
                 + "Description  of Damage : " + escape(document.getElementById('description').value) + "%0A" + "%0A"
                 ;
             window.location.href = link
