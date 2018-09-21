@@ -1,7 +1,7 @@
 var radio= document.getElementById('submit');
 
 function sendMail() {
-   var link = "mailto:jward@lynden.com"
+   var link = "mailto:rcable@lynden.com"
                 + "?cc=jward@Lynden.com"
                 + "&subject=" + escape("Thank You Form")
                 + "&body=Here is the info you requested%0A"

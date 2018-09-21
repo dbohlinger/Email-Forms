@@ -2,7 +2,7 @@
 var submitBtn= document.getElementById('submit');
 
 function sendMail() {
-   var link = "mailto:dylanb@lynden.com"
+   var link = "mailto:tcannon@lynden.com"
                 + "?cc=jward@Lynden.com"
                 + "&subject=" + escape("Station Check Print Request Form")
                 + "&body=Here is the info you requested" +"%0A"

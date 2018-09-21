@@ -33,8 +33,8 @@ $(document).ready(function(){
 
 
 function sendMail() {
-   var link = "mailto:jward@lynden.com"
-                + "?cc=jward@Lynden.com"
+   var link = "mailto:adminmanagegroups@lynden.com"
+                + "?cc=LINT.MailgroupApproval@lynden.com"
                 + "&subject=" + escape("New Mail Group Request")
                 + "&body=Here is the info you requested%0A"
                 + "Company Name : " + escape(document.getElementById('companyName').value) + "%0A" + "%0A"

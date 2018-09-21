@@ -2,7 +2,7 @@
 var submitBtn= document.getElementById('submit');
 //
 function sendMail() {
-   var link = "mailto:dylanb@lynden.com"
+   var link = "mailto:SpecialBillingRequest@lynden.com"
                 + "?cc=jward@Lynden.com"
                 + "&subject=" + escape("Special Billing Request")
                 + "&body=Here is the info you requested%0A"

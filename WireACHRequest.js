@@ -2,8 +2,8 @@
 var submitBtn= document.getElementById('submit');
 
 function sendMail() {
-   var link = "mailto:dylanb@lynden.com"
-                + "?cc=jward@Lynden.com"
+   var link = "mailto:kiml@lynden.com"
+                + "?cc=janetl@lynden.com; dylanb@lynden.com"
                 + "&subject=" + escape("Wire/ACH Form")
                 + "&body=Here is the info you requested%0A"
                 + "Payable To: " + escape(document.getElementById('payableTo').value) + "%0A" + "%0A"
