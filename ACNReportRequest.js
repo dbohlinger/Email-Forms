@@ -32,7 +32,7 @@ $(document).ready(function(){
 });
 
 function sendMail() {
-   var link = "mailto:jward@lynden.com"
+   var link = "mailto:ACN.ReportRequest@lynden.com"
                 + "?cc=jward@Lynden.com"
                 + "&subject=" + escape("New Mail Group Request")
                 + "&body=Here is the info you requested%0A"

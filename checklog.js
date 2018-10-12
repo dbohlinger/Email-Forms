@@ -110,10 +110,13 @@ $(document).ready(function () {
  }
 // Adding totals of Bills
 function Total(){
-
+ if(arr.length>0){
+   arr=[];
+ }
   for(var i=0;i<nameGetter.length;i++){
      //per value add to previous value
      var vals=arr.push(Number(nameGetter[i].value));
+     sum=0;
    }
     for(var x=0;x<arr.length;x++){
     Sum +=arr[x];

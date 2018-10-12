@@ -1,0 +1,80 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="ACNReportRequest.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    crossorigin="anonymous"></script>
+  </head>
+      <title>Thank you</title>
+    <body>
+      <h1>Thank you Form</h1>
+      <div class="jumbotron">
+        <div class="container intro">
+          <p>Instructions: Please be advised that all Thank You's must be submitted no late than 8:00am Pacific time on each Friday to make it into the Weekly recognition message.
+             Anything after that will be submitted the following Friday. Thank You!!</p>
+      </div>
+      <hr>
+      <div class="container">
+        <form>
+          <div class="form-group">
+          <div class="form-group row">
+            <div class="col-md-6">
+          <label for="friday"> Include this recognition in the weekly recognition message sent out each Friday?</label>
+          <select id="friday" class="form-control" required>
+            <option value="Choose">Choose</option>
+            <option value="Yes">Yes</option>
+            <option value="NO">NO</option>
+          </select>
+        </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-6">
+          <label for="to">To:</label>
+          <input type="email" class="form-control" name="to" id="to"value="" placeholder="example@lynden.com">
+        </div>
+      <div class="col-md-6">
+        <label for="station">Station:</label>
+          <select name="station" class="form-control" id="station">
+          		<option value="ANC">ANC</option>
+          		<option value="ATL">ATL</option>
+              <option value="BNA">BNA</option>
+              <option value="GO">GO</option>
+          		<option value="HNL">HNL</option>
+          		<option value="JFK">JFK</option>
+          		<option value="LAX">LAX</option>
+          		<option value="MIA">MIA</option>
+          		<option value="ORD">ORD</option>
+          		<option value="SEA">SEA</option>
+          		<option value="SFO">SFO</option>
+          		<option value="SJU">SJU</option>
+          		<option value="WCC">WCC</option>
+          	</select>
+        </select>
+      </div>
+    </div>
+     <div class="form-group row">
+       <div class="col-md-6">
+         <label for="from">From:</label>
+        <input type="email" class="form-control"  id="from" name="from" value="" placeholder="example@lynden.com">
+     </div>
+   </div>
+   <div class="form-group row">
+     <div class="col-md-6">
+      <label for="thankYou"> Thank you for:</label>
+       <textarea name="thankYou" class="form-control"  id="thankYou" rows="8" cols="80"></textarea>
+     </div>
+   </div>
+        </form>
+      </div>
+    </div>
+    <div>
+        <button class="btn btn-primary submit" onclick="sendMail();return false;" id="submit" type="submit" value="Send">Submit</button>
+      </div>
+</div>
+<script src="thanks.js" charset="utf-8"></script>
+    </body>
+  </html>

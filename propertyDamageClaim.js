@@ -1,8 +1,8 @@
 
 var submitBtn= document.getElementById('submit');
 function sendMail() {
-   var link = "mailto:dylanb@lynden.com"
-                + "?cc=jward@Lynden.com"
+   var link = "mailto:PropertyDamageClaim@lynden.com"
+                + "?cc=dylanb@Lynden.com"
                 + "&subject=" + escape("property Damage Claim Form")
                 + "&body=Here is the info you requested%0A"
                 + "Today's Date: " + escape(document.getElementById('todaysDate').value) + "%0A" + "%0A"
