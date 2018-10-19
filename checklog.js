@@ -3,6 +3,7 @@ var Sum        = 0;
 var arr        = [];
 var table      = [];
 var data       = [];
+var checklog   = [];
 var nameGetter = document.getElementsByName('action_amount');
 var rowGetter  = document.getElementsByClassName('form-row');
 var actiondata = document.getElementsByClassName("fieldz");
@@ -16,21 +17,42 @@ var lafBill      = document.getElementById("action_LAF").value,
     actionType   = document.getElementById('action_type').value;
 
 //Objects
+//checkLogg array
+// var checklogData = {
+//       lafBill      = document.getElementById("action_LAF").value,
+//       checkDate    = document.getElementById("action_date").value,
+//       actionCheck  = document.getElementById('action_check').value,
+//       actionREC    = document.getElementById('action_REC').value,
+//       actionAmount = document.getElementById('action_amount').value,
+//       actionType   = document.getElementById('action_type').value
+//}
 
-var objects =[];
-function objData(){
-  for(var i=0; i<actiondata.length; i++){
-      objects[i]={
-       LAFBill: lafBill + (i+1),
-       CheckDate: checkDate + (i+1),
-       Checknumber:actionCheck+ (i+1),
-       RECFrom:actionREC+ (i+1),
-       Amount: actionAmount+ (i+1),
-        Type: actionType+ (i+1)
-     }
-     return objects
-    }
+var checkLogArray ={lafBill, checkDate, actionCheck, actionREC, actionAmount, actionType}
+
+var valx=Object.values(checkLogArray)
+///
+function  checkLogger(){
+  for(var i=0; i<= actiondata.length; i++){
+     forEach()
+  var  values= valx.push(checkLogArray[i]);
+  }
+  return values;
 }
+
+// var objects =[];
+// function objData(){
+//   for(var i=0; i<actiondata.length; i++){
+//       objects[i]={
+//        LAFBill: lafBill,
+//        CheckDate: checkDate,
+//        Checknumber:actionCheck,
+//        RECFrom:actionREC,
+//        Amount: actionAmount,
+//         Type: actionType
+//      }
+//      return objects
+//     }
+//}
 // var info= new Object(){
 //
 //    info.LAF=document.getElementsByName('action_LAF'+next);

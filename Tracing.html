@@ -46,21 +46,47 @@
           <label for="customerperson"> Customer's contact name:</label>
           <input  class="form-control" type="text" name="customerperson"id="customerperson" value="">
     </div>
-      </form>
-      <form>
-        <div class="container">
-          <div class="form-group">
-            <label for="mailCodes">FOR INVOICING, any additional recipient(s') email(s):</label>
-            <textarea class="form-control" id="mailCodes" rows="2" style="width:365px; height: 128px;"></textarea>
-          </div>
-        </div>
-      </form>
+  </div>
+  </form>
+      <hr>
       <form id="hitcodes">
-
-      </form>
-      <form id="ez">
-
-      </form>
+          <div class="col-xs-12">
+            <div id="field">
+              <div id="field0">
+                <div class="form-row fieldz">
+                  <!-- Text input-->
+                  <div class="form-group col-md-3 col-sm-2" >
+                    <label class=" control-label" for="action_hitcode">HitCode(s)</label>
+                    <input id="action_hitcode" name="action_hitcode" type="text" class="form-control input-md">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class=" control-label" for="action_airport">Domestic Airport Code</label>
+                    <input id="action_airport" name="action_airport" type="text" placeholder="" class="form-control input-md">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class=" control-label" for="action_email">Emails for EZ Communication( include Lyden staff email(s)</label>
+                    <input id="action_email" name="action_email" type="text" placeholder="" class="form-control input-md">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label class=" control-label" for="action_EZ">Enable EZ Communication?</label>
+                    <input id="action_EZ" name="action_EZ" type="radio"class="form-control input-md">
+                  </div>
+                </div>
+              </div>
+              <!-- Button -->
+              <div class="form-group">
+                <div class="col-md-6">
+                  <button id="add-more" name="add-more" class="btn btn-primary" style="margin:0 90%;">Add More</button>
+                </div>
+              </div>
+            </div>
+          <form>
+              <div class="form-group">
+                <label for="mailCodes">FOR INVOICING, any additional recipient(s') email(s):</label>
+                <textarea class="form-control" id="mailCodes" rows="2" style="width:365px; height: 128px;"></textarea>
+              </div>
+            </div>
+          </form>
 
       <!-- <form>
     <div class="container">
