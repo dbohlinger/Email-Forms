@@ -20,21 +20,21 @@
             <label class="input-group-text" for="inputGroupSelect01">Station</label>
           </div>
           <select class="custom-select" id="inputGroupSelect01">
-    <option value="ANC">ANC</option>
-    <option value="ATL">ATL</option>
-    <option value="BNA">BNA</option>
-    <option value="HNL">HNL</option>
-    <option value="JFK">JFK</option>
-    <option value="LAX">LAX</option>
-    <option value="MIA">MIA</option>
-    <option value="ORD">ORD</option>
-    <option value="PDX">PDX</option>
-    <option value="PHX">PHX</option>
-    <option value="SEA">SEA</option>
-    <option value="SFO">SFO</option>
-    <option value="SJU">SJU</option>
-    <option value="WCC">WCC</option>
-      </select>
+            <option value="ANC">ANC</option>
+            <option value="ATL">ATL</option>
+            <option value="BNA">BNA</option>
+            <option value="HNL">HNL</option>
+            <option value="JFK">JFK</option>
+            <option value="LAX">LAX</option>
+            <option value="MIA">MIA</option>
+            <option value="ORD">ORD</option>
+            <option value="PDX">PDX</option>
+            <option value="PHX">PHX</option>
+            <option value="SEA">SEA</option>
+            <option value="SFO">SFO</option>
+            <option value="SJU">SJU</option>
+            <option value="WCC">WCC</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="todaysDate">Today's Date</label>
@@ -47,55 +47,57 @@
       </form>
       <hr>
       <!-- Check Log Table!-->
-        <div class="col-xs-12">
-          <div id="field">
-            <div id="field0">
+      <form>
+      <div class="col-xs-12">
+        <div id="field">
+          <div id="field0">
+            <!-- Text input-->
+            <div class="form-row fieldz">
+              <div class="form-group col-md-2">
+                <label class="control-label" for="action_LAF">LAF Bill#</label>
+                <input id="action_LAF" name="action_LAF" type="text" class="form-control input-md">
+              </div>
+
               <!-- Text input-->
-              <div class="form-row fieldz">
-                <div class="form-group col-md-2">
-                  <label class="control-label" for="action_LAF">LAF Bill#</label>
-                    <input id="action_LAF" name="action_LAF" type="text" class="form-control input-md">
-                </div>
+              <div class="form-group col-md-2 col-sm-2">
+                <label class=" control-label" for="action_date">Check Date</label>
+                <input id="action_date" name="action_date" type="date" class="form-control input-md">
+              </div>
+              <div class="form-group col-md-2">
+                <label class=" control-label" for="action_check">Check #</label>
+                <input id="action_check" name="action_check" type="text" placeholder="" class="form-control input-md">
+              </div>
+              <div class="form-group col-md-2">
+                <label class=" control-label" for="action_REC">Rec'd From</label>
+                <input id="action_REC" name="action_REC" type="text" placeholder="" class="form-control input-md">
+              </div>
+              <div class="form-group col-md-2">
+                <label class=" control-label" for="action_amount">Amount</label>
+                <input id="action_amount" name="action_amount" type="text" class="form-control input-md">
+              </div>
 
-                <!-- Text input-->
-                <div class="form-group col-md-2 col-sm-2" >
-                  <label class=" control-label" for="action_date">Check Date</label>
-                  <input id="action_date" name="action_date" type="date" class="form-control input-md">
-                </div>
-                <div class="form-group col-md-2">
-                  <label class=" control-label" for="action_check">Check #</label>
-                  <input id="action_check" name="action_check" type="text" placeholder="" class="form-control input-md">
-                </div>
-                <div class="form-group col-md-2">
-                  <label class=" control-label" for="action_REC">Rec'd From</label>
-                  <input id="action_REC" name="action_REC" type="text" placeholder="" class="form-control input-md">
-                </div>
-                <div class="form-group col-md-2">
-                  <label class=" control-label" for="action_amount">Amount</label>
-                  <input id="action_amount" name="action_amount" type="text"class="form-control input-md">
-                </div>
-
-                <div class="form-group col-md-2">
-                  <label class=" control-label" for="action_type">Type of Funds</label>
-                  <input id="action_type" name="action_type" type="text" class="form-control input-md">
-                </div>
+              <div class="form-group col-md-2">
+                <label class=" control-label" for="action_type">Type of Funds</label>
+                <input id="action_type" name="action_type" type="text" class="form-control input-md">
               </div>
             </div>
-            <!-- Button -->
-            <div class="form-group">
-              <div class="col-md-6">
-                <button id="add-more" name="add-more" class="btn btn-primary" style="margin:0 90%;">Add More</button>
-              </div>
+          </div>
+          <!-- Button -->
+          <div class="form-group">
+            <div class="col-md-6">
+              <button id="add-more" name="add-more" class="btn btn-primary" style="margin:0 90%;">Add More</button>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <button class="btn btn-success" onclick="sendMail();return false" id="submit" type="submit" value="Send" style="margin:2% 40%;width:15%">Submit</button>
-        </div>
-
+    </form>
     </div>
-<script src="checklog.js" charset="utf-8"></script>
+    <div>
+      <button class="btn btn-success" onclick="sendMail();return false" id="submit" type="submit" value="Send" style="margin:2% 40%;width:15%">Submit</button>
+    </div>
+
+  </div>
+  <script src="checklog.js" charset="utf-8"></script>
 </body>
 
 </html>
