@@ -3,6 +3,7 @@ var inputGetter=document.getElementsByClassName('fieldz');
 var duplicate=[];
 var address=[];
 var Bill=[];
+var arr= [];
 var hitcode= document.getElementsByClassName('lol').value;
 var duplicateTrue= document.getElementsByClassName('className')
 
@@ -133,7 +134,7 @@ function sendMail() {
                 + "&subject=" + escape("New Mail Group Request")
                 + "&body=Here is the info you requested%0A"
                 + "HitCodes : " +setValue() + "%0A" + "%0A"
-                + "Duplicate Hitcodes : " +duplicate()  + "%0A" + "%0A"
+                // + "Duplicate Hitcodes : " +duplicate()  + "%0A" + "%0A"
                 + "Address : " + escape(document.getElementById('address').value) + "%0A" + "%0A"
                 + "Kayak Error : " + escape(document.getElementById('Kayak').value) + "%0A" + "%0A"
                 + "Other? : " + escape(document.getElementById('other').value) + "%0A" + "%0A"

@@ -26,17 +26,17 @@ var lafBill = document.getElementById("action_LAF").value,
 //       actionAmount = document.getElementById('action_amount').value,
 //       actionType   = document.getElementById('action_type').value
 //}
-{ "$schema": "http://json-schema.org/schema#" }
-const schema = require("schm");
-
-const  dataSchema= schema({
-  lafBill: String,
-  checkDate: String,
-  actionCheck: String,
-  actionRec: String,
-  actionAmount: Number,
-  actionType: String
-});
+// { "$schema": "http://json-schema.org/schema#" }
+// const schema = require("schm");
+// 
+// const  dataSchema= schema({
+//   lafBill: String,
+//   checkDate: String,
+//   actionCheck: String,
+//   actionRec: String,
+//   actionAmount: Number,
+//   actionType: String
+// });
 
 
 var checkLogArray = {
