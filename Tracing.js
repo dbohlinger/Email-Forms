@@ -1,3 +1,30 @@
+// variables
+var mongodb = require('mongodb');
+var mongo = require('mongo');
+//methods
+
+//Dynamic Getters
+
+//Schema
+
+mongo("");
+
+mongo.Schema()[
+   {
+    CustomerCompanyName:String,
+    CustomerEmail:String,
+    CustomersPhone:String,
+    ContactName:String,
+  },
+  {
+    Customer:CustomerCompanyName,
+    HitCode:String,
+    Airport:String,
+    Email: String,
+    EZ: Number
+
+  }
+]
 
 
 
