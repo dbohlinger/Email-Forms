@@ -1,5 +1,9 @@
 
-//Dynamically Add  More Checklogs
+
+
+
+
+//Dynamic Added inputs
 $(document).ready(function () {
     var next = 0;
     $("#add-more").click(function(e){
@@ -10,30 +14,22 @@ $(document).ready(function () {
         var newIn =     '<div id="field'+ next +'" name="field'+ next +'"> '+
                         '<!-- Text input-->'+
                             '<div class="form-row fieldz">'+
-                             '<div class="form-group col-md-2">'+
-                                ' <label class="control-label" for="action_LAF">LAF Bill#</label> '+
-                                    ' <input id="action_LAF'+next+'" name="action_LAF" type="text" class="form-control input-md  ">'+
+                             '<div class="form-group col-md-3">'+
+                                ' <label class="control-label" for="action_LAF">Hitcode</label> '+
+                                    ' <input id="action_hitcode'+next+'" name="action_hitcode" type="text" class="form-control input-md  ">'+
                                 '</div>'+
                             '<!-- Text input-->'+
-                            '<div class="form-group col-md-2 col-sm-2"> '+
-                                '<label class=" control-label" for="action_date">Check Date</label>'+
-                                    '  <input id="action_date'+next+'"" name="action_date" type="date" class="form-control input-md "> '+
+                            '<div class="form-group col-md-3 col-sm-3"> '+
+                                '<label class=" control-label" for="action_airport">Domestic Airport Code</label>'+
+                                    '  <input id="action_airport'+next+'"" name="action_airport" type="text" class="form-control input-md "> '+
                                     '</div>'+
-                                '<div class="form-group col-md-2">'+
-                                '<label class="control-label" for="action_check">Check #</label> '+
-                                    ' <input id="action_check'+next+'"" name="action_check" type="text" placeholder="" class="form-control input-md"> '+
+                                '<div class="form-group col-md-3">'+
+                                '<label class="control-label" for="action_email">Email</label> '+
+                                    ' <input id="action_email'+next+'"" name="action_check" type="email" placeholder="" class="form-control input-md"> '+
                                 '</div>'+
-                                '<div class="form-group col-md-2">'+
-                                '<label class=" control-label" for="action_REC">Rec From</label>'+
-                                '<input id="action_REC'+next+'"" name="action_REC" type="text" placeholder="" class="form-control input-md">'+
-                                '</div>'+
-                                '<div class="form-group col-md-2">'+
-                                  '<label class=" control-label" for="action_amount">Amount</label>'+
-                                  '<input id="action_amount'+next+'"" name="action_amount" type="text"class="form-control input-md">'+
-                                '</div>'+
-                                '<div class="form-group col-md-2">'+
-                                  '<label class=" control-label" for="action_type">Type of Funds</label>'+
-                                  '<input id="action_type'+next+'"" name="action_type" type="text" class="form-control input-md">'+
+                                '<div class="form-group col-md-3">'+
+                                '<label class=" control-label" for="action_EZ">Enable EZ Communication</label>'+
+                                '<input id="action_EZ'+next+'"" name="action_EZ" type="radio" placeholder="" class="form-control input-md">'+
                                 '</div>'+
                             '</div>'+
                         '</div>';
