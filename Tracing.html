@@ -10,6 +10,8 @@
     <title> Tracing/Reporting/Invoicing Setup Request</title>
   </head>
   <body>
+    <? php include 'tracing.php' ; ?>
+    
     <header>
         <h1> Tracing/Reporting/Invoicing Setup Request</h1>
     </header>
@@ -49,7 +51,7 @@
   </div>
   </form>
       <hr>
-      <form id="hitcodes">
+      <form id="hitcodes" method="post" action="/tracing.php">
           <div class="col-xs-12">
             <div id="field">
               <div id="field0">
@@ -123,6 +125,8 @@
 </div>
 </form> -->
 </div>
+<?php
+?>
   <script type="text/javascript" src="Tracing.js">
   </script>
   </body>

@@ -1,31 +1,41 @@
-// variables
-var mongodb = require('mongodb');
-var mongo = require('mongo');
+//variables
+
+
+
 //methods
 
 //Dynamic Getters
 
 //Schema
+//
+// mongo("");
+//
+// mongo.Schema()[
+//    {
+//     CustomerCompanyName:String,
+//     CustomerEmail:String,
+//     CustomersPhone:String,
+//     ContactName:String,
+//   },
+//   {
+//     Customer:CustomerCompanyName,
+//     HitCode:String,
+//     Airport:String,
+//     Email: String,
+//     EZ: Number
+//
+//   }
+// ]
 
-mongo("");
 
-mongo.Schema()[
-   {
-    CustomerCompanyName:String,
-    CustomerEmail:String,
-    CustomersPhone:String,
-    ContactName:String,
-  },
-  {
-    Customer:CustomerCompanyName,
-    HitCode:String,
-    Airport:String,
-    Email: String,
-    EZ: Number
+//Sudo Code for  Dynmaic Inputs
 
-  }
-]
-
+//1. set up Schema for Inputs
+// 2. Get Values for Schema
+//3. Return Values for Schema
+//     3.a  Store Values in DB???
+//4   Log Values in email?
+// 1. get Values for  Input
 
 
 
