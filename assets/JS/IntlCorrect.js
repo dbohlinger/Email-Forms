@@ -6,7 +6,7 @@ var Description   = []
 var correctGetter = document.getElementsByName('action_corrected');
 var rowGetter     = document.getElementsByClassName('row');
 var originGetter  = document.getElementsByName('action_original');
-var  des= document.getElementById('action_id');
+var  des          =document.getElementById('action_id');
 //Dynamic Row Capturing
 var ddGetter      = document.getElementsByClassName('form-group col-md-4');
 
