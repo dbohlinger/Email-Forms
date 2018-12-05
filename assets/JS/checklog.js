@@ -7,7 +7,7 @@ var checklog = [];
 var nameGetter = document.getElementsByName('action_amount');
 var rowGetter = document.getElementsByClassName('form-row');
 var actiondata = document.getElementsByClassName("fieldz");
-
+var next = 0;
 //Dynamic getters
 var lafBill = document.getElementById("action_LAF").value,
   checkDate = document.getElementById("action_date").value,
@@ -28,7 +28,7 @@ var lafBill = document.getElementById("action_LAF").value,
 //}
 // { "$schema": "http://json-schema.org/schema#" }
 // const schema = require("schm");
-// 
+//
 // const  dataSchema= schema({
 //   lafBill: String,
 //   checkDate: String,
@@ -38,7 +38,14 @@ var lafBill = document.getElementById("action_LAF").value,
 //   actionType: String
 // });
 
+function checklogggers(lafBill, checkDate, actionCheck, actionREC, actionAmount, actionType){
 
+for(var i=1; i<actiondata.length; i++){
+
+  console.log(lafBill[("action_check"+i)].value)
+}
+
+}
 var checkLogArray = {
   lafBill,
   checkDate,
