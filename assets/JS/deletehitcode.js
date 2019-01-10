@@ -1,19 +1,94 @@
-var radio=document.getElementsByClassName("btn");
-var inputGetter=document.getElementsByClassName('fieldz');
-var duplicate=[];
-var address=[];
-var Bill=[];
-var arr= [];
-var hitcode= document.getElementsByClassName('lol').value;
-var duplicateTrue= document.getElementsByClassName('className')
+//Variables
+var radio         = document.getElementsByClassName("btn");
+var inputGetter   = document.getElementsByClassName('fieldz');
+var field         = document.getElementsByClassName("form-row");
+var duplicate     = [];
+var address       = [];
+var bill          = [];
+var arr           = [];
+var hitcode       = document.getElementsByClassName('lol').value;
+var duplicateTrue = document.getElementsByClassName('className')
+
+///Constructor(s)
+   //1. define object
+   //2. get the data
+   //3. return objects
+
+ //Prototype approach
+function Row(hitcode, duplicate, kayak, address, other1, other){
+  this.hitcode   = hitcode;
+  this.duplicate = duplicate;
+  this.kayak     = kayak;
+  this.address   = address;
+  this.other1    = other1;
+  this.other     = other;
+
+  //Methods
+  // Outer Counter to count the number of rows.
+     // For Each row get create new object
+
+  // inner counter to count the data?
+
+   Row.prototype.getRowData = function(){
+     for(var i= 0; i<=inputGetter.length; i++){
+     hitcode= data.push()
+
+     }
+     console.log()
+   }
+
+}
+
+function captureData(hitcode){
+  for (var i = 0; i <= inputGetter.length; i++) {
+      var arr= [];
+       var values=  arr.push('action_LAF'[i]).value
+  }
+  return arr
+}
+
+ // call below later in the function(s)
+    // var row1 = new Row(hitcode, duplicate, kayak, address, other1, other)
+
+  //Constructor approach
+ function deleteData(hitcode, duplicate, kayak, address, other1, other){
+  //declared variables
+    this.hitcode  = document.getElementById('LAF_action').value;
+   this.duplicate = document.getElementById('action_duplicate').value;
+   this.kayak     = document.getElementById('action_kayak').value;
+   this.address   = document.getElementById('action_address').value;
+   this.other1    = document.getElementById('action_other1').checked;
+   this.other     = document.getElementById('action_other').value;
+}
+  //Methods
+      //sudo code
+        //1.declare the variables,
+       //2.loop through the rows
+       //3.capature the data
+       //4. put the data into an array?
+       //print the data....
+//
+  deleteData.prototype.getData=function(){
+     for(var i=0; i<=inputGetter.length; i++){
+        new deleteData
+     }
+  }
+
+//    this.getdata =function(hitcode, duplicate, kayak, address, other1, other){
+//      for(var i=0; i<inputGetter.length; i++){
+//         var
+//       }
+//     } console.log(hitcode, duplicate, kayak, address, other1, other)
+// }
 
 //Object Skema
-var data={
-  hitcode:document.getElementById("action_hitcode").value,
-  duplicate:document.getElementById('action_duplicate').value,
-  kayak: document.getElementById('action_kayak').value,
-  address:document.getElementById('action_address').value
-}
+// var data={
+//   this.action_hitcode= hitcode:document.getElementById("action_hitcode").value,
+//   duplicate:document.getElementById('action_duplicate').value,
+//   kayak: document.getElementById('action_kayak').value,
+//   address:document.getElementById('action_address').value
+// }
+
 
 //Dynamic added input(s);
 $(document).ready(function () {
@@ -25,7 +100,8 @@ $(document).ready(function () {
         next = next + 1;
         var newIn =     '<div id="field'+ next +'" name="field'+ next +'"> '+
                         '<!-- Text input-->'+
-                            '<div class="form-row id=row'+next + '"">'+
+                          // '<div classs="form-row" id="row'+ next'"> '
+                            '<div class="form-row"'+' "id=row'+next +'" >'+
                              '<div class="form-group col-md-2">'+
                                 ' <label class="control-label" for="action_LAF">LAF Bill#</label> '+
                                     ' <input id="action_LAF" name="action_LAF" type="text" class="form-control input-md">'+
@@ -82,21 +158,54 @@ $(document).ready(function () {
 //     }
 //   }
 // }
-/// Assorting Error Function
-function hitCodeLoop(){
-  for(var i=0; i<=hitcode.length; i++){
-    // selecting an error
-    if(data.kayak==true){
-     var water= duplicate.push(hitcode)
 
-   }else if (data.duplicate==true) {
-     var val=duplicate.push(hitcode)
-   }
- }if (data.address==true) {
-    var val=duplicate.push(hitcode);
- }
- return val=data.push(hitcode);
-}
+hitcodes =[]
+duplicates=[]
+kayakError =[]
+addressin= []
+otherReason=[]
+
+//Sorting Hitcodes
+ var hitcodesz= document.getElementsByClassName(('form-row'));
+
+ function sortHitCodes(){
+   for(var y= 0; y<=hitcodesz.length; y++){ //measures how many rows there are
+
+      var  row = hitcodes.push(hitcodesz[y].value) // push hitcodes to array
+     for(var x= 0; x<=row.length; x++){ // measures within each row
+         //Sorting  instantaces
+
+       if(document.getElementById('action_duplicate'[x]).checked==true ){
+            console.log("Duplicates : "+ hitcode);
+          }else if(document.getElementById('action_kayak'[x]).checked==true ){
+            console.log("Kayak error: "+ hitcode);
+          }else  if(document.getElementById('action_address'[x]).checked==true ){
+            console.log("Address Incorrect : "+ hitcode);
+
+          }else if(document.getElementById('action_other1'[x]).checked==true ){
+            console.log("Other Reason : "+action_other[x] +" "+ hitcode);
+
+          }else {
+            console.log("enter a reason")
+          }
+        }
+      }
+  }
+/// Assorting Error Function
+// function hitCodeLoop(){
+//   for(var i=0; i<=hitcode.length; i++){
+//     // selecting an error
+//     if(data.kayak==){
+//      var water= duplicate.push(hitcode)
+//
+//    }else if (data.duplicate==true) {
+//      var val=duplicate.push(hitcode)
+//    }
+//  }if (data.address==true) {
+//     var val=duplicate.push(hitcode);
+//  }
+//  return val=data.push(hitcode);
+// }
 //  1. Loop through Hitcodes,
 // 2. If Duplicate is selected
     //2.a  Push to New Array
@@ -141,3 +250,10 @@ function sendMail() {
                 ;
             window.location.href = link
         }
+
+
+function checkSecurity(){
+  if(user.lms=true){
+    user.persmissions=allowed
+  }
+}

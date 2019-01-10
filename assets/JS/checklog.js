@@ -1,22 +1,119 @@
 // variables
-var Sum = 0;
-var arr = [];
-var table = [];
-var data = [];
-var checklog = [];
+var Sum        = 0;
+var arr        = [];
+var table      = [];
+var data       = [];
+var checklog   = [];
 var nameGetter = document.getElementsByName('action_amount');
-var rowGetter = document.getElementsByClassName('form-row');
+var rowGetter  = document.getElementsByClassName('form-row');
 var actiondata = document.getElementsByClassName("fieldz");
-var next = 0;
+var next       = 0;
 //Dynamic getters
-var lafBill = document.getElementById("action_LAF").value,
-  checkDate = document.getElementById("action_date").value,
-  actionCheck = document.getElementById('action_check').value,
-  actionREC = document.getElementById('action_REC').value,
+var lafBill    = document.getElementById("action_LAF").value,
+  checkDate    = document.getElementById("action_date").value,
+  actionCheck  = document.getElementById('action_check').value,
+  actionREC    = document.getElementById('action_REC').value,
   actionAmount = document.getElementById('action_amount').value,
-  actionType = document.getElementById('action_type').value;
+  actionType   = document.getElementById('action_type').value;
 
-//Objects
+var capData = [
+  lafBill    = document.getElementById("action_LAF").value,
+  checkDate    = document.getElementById("action_date").value,
+  actionCheck  = document.getElementById('action_check').value,
+  actionREC    = document.getElementById('action_REC').value,
+  actionAmount = document.getElementById('action_amount').value,
+  actionType   = document.getElementById('action_type').value
+]
+var row = []
+//Constructors
+
+function dataCapture(bill, date, check, rec, amount, type){
+ //declared variables
+  this.bill = document.getElementById('action_LAF').value;
+  this.date  = document.getElementById('action_date').value;
+  this.check = document.getElementById('action_check').value;
+  this.rec   = document.getElementById('action_REC').value;
+  this.amount= document.getElementById('action_amount').value;
+  this.type  = document.getElementById('action_type').value;
+}
+ var capsdates = [
+
+function addArray(bill, date, check, rec, amount, type){
+    this.bill= [];
+    this.date= [];
+    this.check= [];
+    this.rec= [];
+    this.amount= [];
+    this.type= []
+}
+
+]
+
+function lastData(){
+  for(var i=0; i<=nameGetter.length; i++){
+    capsdates.addArray.bill.push(lafBill[i].value);
+  capsdates.addArray.date.push(checkDate[i].value);
+  capsdates.addArray.check.push(actionCheck[i].value);
+    capsdates.addArray.rec.push(actionREC[i].value);
+  capsdates.addArray.amount.push(actionAmount[i].value);
+  capsdates.addArray.type.push(actionType[i].value);
+  }
+  return capsdates;
+}
+ //Methods
+     //sudo code
+       //1.declare the variables,
+      //2.loop through the rows
+      //3.capature the data
+      //4. put the data into an array?
+      //print the data....
+//
+ dataCapture.prototype.getData=function(){
+    for(var i=0; i<=nameGetter.length; i++){
+       new  dataCapture
+    }
+ }
+ function getCapData(){
+   for(var i=0; i<=nameGetter.length;i++){
+      var row=capData.push(lafBill,checkDate,actionCheck, actionREC,actionAmount, actionType)
+   }
+ }
+
+ //For Each
+ capData.forEach(function(capData){
+   row.push(capData);
+ });
+//Arrays//
+// function arrayBuild(){
+//  masterArray = []
+//    rowArray=[]
+//      rowArray.i
+//    ]
+//  ]
+// }
+
+// var resultObject    = {
+//   this.lafBill      = lafBill;
+//   this.checkDate    = checkDate;
+//   this.actionREC    = actionREC;
+//   this.actionAmount = actionAmount;
+//   this.actionType   = actionType;
+// }
+//
+
+//Serialized Array
+// function serialAttempt(){
+// var result={};
+// $.each($("dynamicform").serializeArray(),function(){
+// result[this.name]=this.value;
+// });
+// console.log(result)
+// }
+// $(".btn").click(function(){
+//   $('.dynamicform').submit(function(event){
+//     console.log($(this).serializeArray());
+//   });
+//  });
 //checkLogg array
 // var checklogData = {
 //       lafBill      = document.getElementById("action_LAF").value,
@@ -38,32 +135,39 @@ var lafBill = document.getElementById("action_LAF").value,
 //   actionType: String
 // });
 
-function checklogggers(lafBill, checkDate, actionCheck, actionREC, actionAmount, actionType){
-
-for(var i=1; i<actiondata.length; i++){
-
-  console.log(lafBill[("action_check"+i)].value)
-}
-
-}
-var checkLogArray = {
-  lafBill,
-  checkDate,
-  actionCheck,
-  actionREC,
-  actionAmount,
-  actionType
-}
-
-var valx = Object.values(checkLogArray)
-///
-function checkLogger() {
-  for (var i = 0; i <= actiondata.length; i++) {
-    forEach()
-    var values = valx.push(checkLogArray[i]);
-  }
-  return values;
-}
+// function firstArray{
+//   for(var i=0 i<= rowGetter.length; i++){
+//     var value= i
+//   }
+// }
+//
+//
+// function checklogggers(lafBill, checkDate, actionCheck, actionREC, actionAmount, actionType){
+//
+// for(var i=1; i<actiondata.length; i++){
+//
+//   console.log(lafBill[("action_check"+i)].value)
+// }
+//
+// }
+// var checkLogArray = {
+//   lafBill,
+//   checkDate,
+//   actionCheck,
+//   actionREC,
+//   actionAmount,
+//   actionType
+// }
+//
+// var valx = Object.values(checkLogArray)
+// ///
+// function checkLogger() {
+//   for (var i = 0; i <= actiondata.length; i++) {
+//     forEach()
+//     var values = valx.push(checkLogArray[i]);
+//   }
+//   return values;
+// }
 
 // var objects =[];
 // function objData(){
@@ -88,12 +192,12 @@ function checkLogger() {
 // //    info.amount=document.getElementsByName('action_amount');
 // //    info.type=document.getElementsByName('action_type');
 // }
-
-function HelloValue(form){
-   for(var i=0; i<rowGetter.length; i++){
-     console.log(form["action_check" +i].value )
-   }
-}
+//
+// function HelloValue(form){
+//    for(var i=0; i<rowGetter.length; i++){
+//      console.log(form["action_check" +i].value )
+//    }
+// }
 
 //Dynamically Add  More Checklogs
 $(document).ready(function() {
@@ -160,7 +264,9 @@ function objectUpdater() {
   }
   console.log(table);
 }
+
 // Adding totals of Bills
+
 function Total() {
   if (arr.length > 0) {
     arr = [];
@@ -171,9 +277,9 @@ function Total() {
     sum = 0;
   }
   for (var x = 0; x < arr.length; x++) {
-    Sum += arr[x];
+    sum += arr[x];
   }
-  return Sum;
+  return sum;
 }
 
 //Send Mail Function dynamically
@@ -183,6 +289,13 @@ function dyanmicEmail() {
     var vals = data.push(rowGetter[i].value);
   }
   console.log(data);
+}
+
+//print values to email
+function printValue(){
+  for(var i=0; i<=rowGetter.length; i++){
+    escape(document.getElementById(+[i].value))
+  }
 }
 // Old Sendmail Function
 
