@@ -121,7 +121,7 @@ $(document).ready(function () {
                                 '</div>'+
                                 '<div class="form-group col-sm-2">'+
                                   '<label class="control-label" for="action_other1">Other?</label>'+
-                                    '<input id="action_other1" name="action_error'+next+'" type="radio" class="form-control input-md lol">'+
+                                    '<input id="action_other1" name="action_error'+next+'" type="radio" value="3" class="form-control input-md lol">'+
                                 '</div>'+
                                 '<div class="form-group col-sm-2">'+
                                   '<label class="control-label" for="action_other">Other Reason?</label>'+
@@ -165,28 +165,33 @@ kayakError =[]
 addressin= []
 otherReason=[]
 
+radios=[]
+
+var hitValue= document.getElementById("action_hitcode");
+var radioValue = document.getElementsByClassName('lol')
 //Sorting Hitcodes
  var hitcodesz= document.getElementsByClassName(('form-row'));
 
  function sortHitCodes(){
    for(var y= 0; y<=hitcodesz.length; y++){ //measures how many rows there are
 
-      var  row = hitcodes.push(hitcodesz[y].value) // push hitcodes to array
-     for(var x= 0; x<=row.length; x++){ // measures within each row
+       hitcodes.push(hitValue[y].value);
+         // push hitcodes to array
+     for(var x= 0; x<=hitcodes.length; x++){ // measures within each row
          //Sorting  instantaces
 
-       if(document.getElementById('action_duplicate'[x]).checked==true ){
+       if(radioValue===0 ){
             console.log("Duplicates : "+ hitcode);
-          }else if(document.getElementById('action_kayak'[x]).checked==true ){
-            console.log("Kayak error: "+ hitcode);
-          }else  if(document.getElementById('action_address'[x]).checked==true ){
-            console.log("Address Incorrect : "+ hitcode);
+          }else if(radioValue===1 ){
+            console.log("address incorrect: "+ hitcode);
+          }else  if(radioValue===2 ){
+            console.log("Kayak Error : "+ hitcode);
 
-          }else if(document.getElementById('action_other1'[x]).checked==true ){
+          }else if(radioValue===3 ){
             console.log("Other Reason : "+action_other[x] +" "+ hitcode);
 
           }else {
-            console.log("enter a reason")
+            console.log("no reason listed")
           }
         }
       }

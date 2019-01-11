@@ -36,7 +36,7 @@ function dataCapture(bill, date, check, rec, amount, type){
   this.amount= document.getElementById('action_amount').value;
   this.type  = document.getElementById('action_type').value;
 }
- var capsdates = [
+ var capsdates = [];
 
 function addArray(bill, date, check, rec, amount, type){
     this.bill= [];
@@ -47,16 +47,16 @@ function addArray(bill, date, check, rec, amount, type){
     this.type= []
 }
 
-]
+
 
 function lastData(){
   for(var i=0; i<=nameGetter.length; i++){
-    capsdates.addArray.bill.push(lafBill[i].value);
-  capsdates.addArray.date.push(checkDate[i].value);
-  capsdates.addArray.check.push(actionCheck[i].value);
-    capsdates.addArray.rec.push(actionREC[i].value);
-  capsdates.addArray.amount.push(actionAmount[i].value);
-  capsdates.addArray.type.push(actionType[i].value);
+    addArray.bill.push(lafBill[i].value);
+    addArray.date.push(checkDate[i].value);
+    addArray.check.push(actionCheck[i].value);
+    addArray.rec.push(actionREC[i].value);
+    addArray.amount.push(actionAmount[i].value);
+    addArray.type.push(actionType[i].value);
   }
   return capsdates;
 }
