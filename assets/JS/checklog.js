@@ -1,5 +1,5 @@
 // variables
-var Sum        = 0;
+var sum        = 0;
 var arr        = [];
 var table      = [];
 var data       = [];
@@ -15,50 +15,53 @@ var lafBill    = document.getElementById("action_LAF").value,
   actionREC    = document.getElementById('action_REC').value,
   actionAmount = document.getElementById('action_amount').value,
   actionType   = document.getElementById('action_type').value;
-
-var capData = [
-  lafBill    = document.getElementById("action_LAF").value,
-  checkDate    = document.getElementById("action_date").value,
-  actionCheck  = document.getElementById('action_check').value,
-  actionREC    = document.getElementById('action_REC').value,
-  actionAmount = document.getElementById('action_amount').value,
-  actionType   = document.getElementById('action_type').value
-]
+//
+// var capData = [
+//   lafBill      = document.getElementById("action_LAF").value,
+//   checkDate    = document.getElementById("action_date").value,
+//   actionCheck  = document.getElementById('action_check').value,
+//   actionREC    = document.getElementById('action_REC').value,
+//   actionAmount = document.getElementById('action_amount').value,
+//   actionType   = document.getElementById('action_type').value
+// ]
 var row = []
 //Constructors
 
-function dataCapture(bill, date, check, rec, amount, type){
- //declared variables
-  this.bill = document.getElementById('action_LAF').value;
-  this.date  = document.getElementById('action_date').value;
-  this.check = document.getElementById('action_check').value;
-  this.rec   = document.getElementById('action_REC').value;
-  this.amount= document.getElementById('action_amount').value;
-  this.type  = document.getElementById('action_type').value;
-}
+// function dataCapture(bill, date, check, rec, amount, type){
+//  //declared variables
+//   this.bill  = document.getElementById('action_LAF').value;
+//   this.date  = document.getElementById('action_date').value;
+// //   this.check = document.getElementById('action_check').value;
+// //   this.rec   = document.getElementById('action_REC').value;
+// //   this.amount= document.getElementById('action_amount').value;
+// //   this.type  = document.getElementById('action_type').value;
+// }
  var capsdates = [];
 
-function addArray(bill, date, check, rec, amount, type){
-    this.bill= [];
-    this.date= [];
-    this.check= [];
-    this.rec= [];
-    this.amount= [];
-    this.type= []
-}
+// function addArray(bill, date, check, rec, amount, type){
+
+   var bill= [];
+   var date= [];
+   var check= [];
+   var rec= [];
+   var amount= [];
+   var type= []
+
+
+// }
 
 
 
 function lastData(){
   for(var i=0; i<=nameGetter.length; i++){
-    addArray.bill.push(lafBill[i].value);
-    addArray.date.push(checkDate[i].value);
-    addArray.check.push(actionCheck[i].value);
-    addArray.rec.push(actionREC[i].value);
-    addArray.amount.push(actionAmount[i].value);
-    addArray.type.push(actionType[i].value);
+      bill.push(lafBill[i]);
+      date.push(checkDate[i]);
+      check.push(actionCheck[i]);
+      rec.push(actionREC[i]);
+      amount.push(actionAmount[i]);
+      type.push(actionType[i]);
   }
-  return capsdates;
+  console.log(bill,date, check, rec, amount, type);
 }
  //Methods
      //sudo code
@@ -67,23 +70,23 @@ function lastData(){
       //3.capature the data
       //4. put the data into an array?
       //print the data....
-//
- dataCapture.prototype.getData=function(){
-    for(var i=0; i<=nameGetter.length; i++){
-       new  dataCapture
-    }
- }
+// //
+//  dataCapture.prototype.getData=function(){
+//     for(var i=0; i<=nameGetter.length; i++){
+//        new  dataCapture
+//     }
+//  }
  function getCapData(){
    for(var i=0; i<=nameGetter.length;i++){
       var row=capData.push(lafBill,checkDate,actionCheck, actionREC,actionAmount, actionType)
    }
  }
-
- //For Each
- capData.forEach(function(capData){
-   row.push(capData);
- });
-//Arrays//
+//
+//  //For Each
+//  capData.forEach(function(capData){
+//    row.push(capData);
+//  });
+// //Arrays//
 // function arrayBuild(){
 //  masterArray = []
 //    rowArray=[]
