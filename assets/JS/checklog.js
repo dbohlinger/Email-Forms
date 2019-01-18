@@ -8,6 +8,7 @@ var nameGetter = document.getElementsByName('action_amount');
 var rowGetter  = document.getElementsByClassName('form-row');
 var actiondata = document.getElementsByClassName("fieldz");
 var next       = 0;
+var SchemaObject= require('schema-object');
 //Dynamic getters
 var lafBill    = document.getElementById("action_LAF").value,
   checkDate    = document.getElementById("action_date").value,
@@ -15,6 +16,31 @@ var lafBill    = document.getElementById("action_LAF").value,
   actionREC    = document.getElementById('action_REC').value,
   actionAmount = document.getElementById('action_amount').value,
   actionType   = document.getElementById('action_type').value;
+
+var  Row = new SchemaObject({
+  lafBill: String,
+  checkDate:Date,
+  actionCheck: String,
+  actionREC: String,
+  actionAmount: Number,
+  actionType:String
+});
+
+
+function getRowData(){
+  for(var i=0; i<=rowGetter.length; i++){
+    var row = new Row({
+        lafBill:  document.getElementById("action_LAF").value,
+        checkDate:  document.getElementById("action_date").value,
+        actionCheck: document.getElementById('action_check').value,
+        actionREC  : document.getElementById('action_REC').value,
+        actionAmoun: document.getElementById('action_amount').value,
+        actionType : document.getElementById('action_type').value
+      });
+      console.log(row); 
+    }
+}
+
 //
 // var capData = [
 //   lafBill      = document.getElementById("action_LAF").value,
@@ -24,7 +50,7 @@ var lafBill    = document.getElementById("action_LAF").value,
 //   actionAmount = document.getElementById('action_amount').value,
 //   actionType   = document.getElementById('action_type').value
 // ]
-var row = []
+
 //Constructors
 
 // function dataCapture(bill, date, check, rec, amount, type){

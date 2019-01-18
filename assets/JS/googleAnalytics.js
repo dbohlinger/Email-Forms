@@ -1,5 +1,5 @@
-1)	<!-- START Google Analytics Code -->
-<!--<script type="text/javascript">
+<!-- START Google Analytics Code -->
+<!--<script type="text/javascript">--->
 
                 var _gaq = _gaq || [];
                 _gaq.push(['_setAccount', 'UA-5192979-5']);
