@@ -2,19 +2,19 @@
 var submitBtn= document.getElementById('submit');
 
 function sendMail() {
-   var link = "mailto:dylanb@lynden.com"
-    + "?cc=jward@Lynden.com"
-    + "&subject=" + escape("Hit Code Form (Beta)")
+   var link = "mailto:ARCustomerSvc@lynden.com"
+    + "?cc=dylanb@lynden.com"
+    + "&subject=" + escape("New Hitcode Request")
     + "&body=Here is the info you requested%0A"
-    + "Customer details : " + escape(document.getElementById('customerName').value) + "%0A" + "%0A"
-    + "Address : " + escape(document.getElementById('Address').value) + "%0A" + "%0A"
-    + "City : " + escape(document.getElementById('City').value) + "%0A" + "%0A"
-    + "State : " + escape(document.getElementById('state').value) + "%0A" + "%0A"
-+ "Zip: " + escape(document.getElementById('zip').value) + "%0A" + "%0A"
-+ "Contact name : " + escape(document.getElementById('contactName').value) + "%0A" + "%0A"
-+ "Telephone : " + escape(document.getElementById('phone').value) + "%0A" + "%0A"
+    + "Customer's Name : " + escape(document.getElementById('custName').value) + "%0A" + "%0A"
+    + "Address : " + escape(document.getElementById('address1').value) + "%0A" + "%0A"
+    + "Address 2 : " + escape(document.getElementById('address2').value) + "%0A" + "%0A"
+    + "City : " + escape(document.getElementById('inputCity').value) + "%0A" + "%0A"
+    + "State : " + escape(document.getElementById('inputState').value) + "%0A" + "%0A"
++ "Zip: " + escape(document.getElementById('inputZip').value) + "%0A" + "%0A"
++ "Contact name : " + escape(document.getElementById('contact').value) + "%0A" + "%0A"
++ "Telephone : " + escape(document.getElementById('tel').value) + "%0A" + "%0A"
 + "Sales Rep : " + escape(document.getElementById('sales').value) + "%0A" + "%0A"
-    + "Additional Text : " 
                 ;
             window.location.href = link
         }

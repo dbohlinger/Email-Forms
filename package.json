@@ -1,0 +1,36 @@
+{
+  "name": "emailforms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "gulp": "^3.9.1",
+    "http-server": "^0.11.1",
+    "list.js": "^1.5.0",
+    "mariadb": "^2.0.2-rc",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.6",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
+    "schema-object": "^4.0.11",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbohlinger/Email-Forms.git"
+  },
+  "author": "dylan_bohlinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbohlinger/Email-Forms/issues"
+  },
+  "homepage": "https://github.com/dbohlinger/Email-Forms#readme"
+}
