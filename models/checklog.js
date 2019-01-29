@@ -8,6 +8,21 @@ var nameGetter = document.getElementsByName('action_amount');
 var rowGetter  = document.getElementsByClassName('form-row');
 var actiondata = document.getElementsByClassName("fieldz");
 var next       = 0;
+
+
+var mongoose = require('mongoose');
+
+var Schema = mongoose.Schema;
+
+var checklogSchema = new Schema({
+   LAF_Bill: String,
+   check_Date: DATE,
+  Check_Number: String,
+  Recieved_From: String,
+  Amount: Number,
+  Type_of_Funds:String
+});
+
 var SchemaObject= require('schema-object');
 //Dynamic getters
 var lafBill    = document.getElementById("action_LAF").value,
@@ -37,7 +52,7 @@ function getRowData(){
         actionAmoun: document.getElementById('action_amount').value,
         actionType : document.getElementById('action_type').value
       });
-      console.log(row); 
+      console.log(row);
     }
 }
 
@@ -342,3 +357,5 @@ function sendMail() {
 
   window.location.href = link
 }
+
+module.exports=mongoose.model("Checklog",checklogSchema);
