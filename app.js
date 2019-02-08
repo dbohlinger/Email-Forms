@@ -1,17 +1,18 @@
 //initial variables
-var ejs         = require('ejs'),
-    express     = require('express'),
+var express     = require('express'),
     app         = express(),
+     ejs        = require('ejs'),
     bodyParser  = require('body-parser'),
-    mariadb     = require('mariadb'),
     port        = 8080,
     mongoose    = require('mongoose');
-
 
 //required Routes
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+
 // //Server
+
+  //MOngo Client
 var MongoClient = require('mongodb').MongoClient
 , assert=require('assert');
 
@@ -30,16 +31,18 @@ MongoClient.connect(url,{ useNewUrlParser: true }, function(err, db){
  db.once("open", function(){
 
  });
-//Routes
 
+//Routes
 app.get('/', function(req, res){
   res.render("index");
 });
-app.get('/distributionList', function(req, res){
-  res.send("HELLO");
-});
 
-//CheckLogg Routes
+
+// app.get('/distributionList', function(req, res){
+//   res.send("HELLO");
+// });
+
+//CheckLog Routes
  app.get('/checklog',function(req,res){
    res.render("checklog");
  });
@@ -63,8 +66,12 @@ app.post("/", function(req,res){
    }
  });
 });
+
+//Ditribution List Routes
 app.get("/dist", function(req,res){
   res.render('dist');
 });
+
+app.post("/distr")
 
 app.listen(port,() => console.log('app is running.'))
